@@ -1,0 +1,1142 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  /* background-color: black; */
+  /* color: white; */
+  font-family: "lora", serif;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1099;
+}
+
+.header1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-family: "Roboto Slab", serif;
+  background-color: rgb(32, 146, 192);
+  color: white;
+  z-index: 500;
+  /* display: none; */
+}
+
+.header1 .container1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header1 .container1 h3 {
+  font-weight: 600;
+}
+
+.header1 .container2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.header1 .container2 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.header2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 4%;
+  font-size: x-large;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  /* color: #2ecc71; */
+  height: max-content;
+  z-index: 10000;
+  /* Glassmorphism Effect */
+  background-color: white; /* Very faint white tint */
+  backdrop-filter: blur(12px); /* Softens what's behind it */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  /* Optional: Adds a subtle line at the bottom to define the edge */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 10vh;
+  transition: background-color 0.4s ease;
+}
+
+.logo img {
+  width: 160px;
+  margin-top: 10px;
+}
+
+.login a {
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(32, 146, 192);
+}
+
+.log-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 18px;
+  background-color: rgb(32, 146, 192);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Roboto Slab", serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.log-btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(232, 227, 228, 0.95),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: all 1.2s ease;
+}
+
+.log-btn:hover::after {
+  left: 150%;
+}
+
+/* --- The Dropdown Container Layout --- */
+.dropdown {
+  display: flex;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* --- The Toggle (Caret) Specific Styling --- */
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
+  color: rgb(32, 146, 192);
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: rgb(32, 146, 192);
+  left: 0;
+  bottom: -10px;
+  transition: all 0.6s ease;
+  border-radius: 5px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* --- The Dropdown Container Layout --- */
+.dropdown {
+  display: flex;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* --- The Toggle (Caret) Specific Styling --- */
+.drop-toggle {
+  cursor: pointer;
+  margin-left: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /* Increases clickable area for the arrow */
+}
+
+.drop-toggle i {
+  color: rgb(32, 146, 192);
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  pointer-events: none; /* Ensures the click registers on the span */
+}
+
+/* --- The Dropdown Menu --- */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Sits right below the nav item */
+  left: 0;
+  background-color: white; /* Very faint white tint */
+  backdrop-filter: blur(10px); /* Softens what's behind it */
+  width: max-content;
+  padding: 5px 10px 15px 10px;
+  margin-top: 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* Hidden State */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+  padding: 0;
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  font-weight: 800;
+}
+
+.dropdown-menu li a:hover {
+  /* background-color: rgba(2, 82, 169, 0.05); */
+}
+
+/* --- Active States (Triggergb(32, 146, 192) by JS) --- */
+
+/* Show the menu */
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotate the caret icon */
+.dropdown.active .drop-toggle i {
+  transform: rotate(180deg);
+}
+
+/* MobileBar Hamburger */
+
+.mobilebar {
+  display: none;
+}
+
+/* Hamburger Box */
+.hamburger-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(32, 146, 192);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Lines */
+.line {
+  width: 25px;
+  height: 3px;
+  background: rgb(32, 146, 192);
+  margin: 4px 0;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger to X animation */
+.hamburger.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line2 {
+  opacity: 0;
+}
+
+.hamburger.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile visibility */
+.mobilebar {
+  display: none; /* Hidden by default */
+}
+
+@media screen and (max-width: 1180px) {
+  .mobilebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header1 {
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header1 .container1 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header1 .container2 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  header {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header1 {
+    font-size: small;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.btn {
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: large;
+  position: relative;
+  overflow: hidden;
+  max-width: fit-content;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgb(32, 146, 192);
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(232, 227, 228, 0.95),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: all 1.2s ease;
+}
+
+.btn:hover::after {
+  left: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1180px) {
+  .mobilebar {
+    display: block;
+  }
+  .header2 .btn {
+    display: none;
+  }
+
+  header nav ul {
+    display: none;
+  }
+  .header1 {
+    display: none;
+  }
+  .log-btn {
+    display: none;
+  }
+}
+
+.subheader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-family: "Roboto Slab", serif;
+  background-color: rgb(32, 146, 192);
+  color: white;
+  z-index: 2000;
+  display: none;
+}
+
+/* container1 */
+.subheader .container1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.subheader .container1 h3 {
+  font-weight: 600;
+}
+
+/* container2 */
+.subheader .container2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.subheader .container2 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1180px) {
+  .subheader {
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subheader .container1 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subheader .container2 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .subheader {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .subheader {
+    font-size: small;
+  }
+}
+
+/* Sidebar */
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Sidebar scrollable independently */
+.sidebar {
+  /* overflow-y: auto; */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+}
+
+.sidebar {
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  padding: 12vh 30px;
+  transition: left 0.4s ease;
+  z-index: 999;
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.9s ease;
+  font-family: "Roboto Slab", serif;
+}
+
+.sidebar.active {
+  left: 0;
+  top: 0;
+}
+
+.sidebar ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+.sidebar ul li a {
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(32, 146, 192);
+
+  /* text-shadow:
+    0 0 6px rgba(255, 95, 126, 0.6),
+    0 0 14px rgba(255, 154, 60, 0.55),
+    0 0 28px rgba(255, 154, 60, 0.4); */
+}
+
+.sidebar-login {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-btn {
+  width: max-content;
+  position: relative;
+  padding: 12px 28px;
+  font-size: large;
+  font-weight: 800;
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden; /* IMPORTANT */
+
+  border: 2px solid black;
+  background: #2ecc71;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* SHIMMER LAYER */
+.login-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(232, 227, 228, 0.95),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+}
+
+/* Hover shimmer */
+.login-btn:hover::before {
+  animation: shimmerSweep 0.9s ease-in-out;
+}
+
+/* Animation */
+@keyframes shimmerSweep {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@media screen and (min-width: 1181px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    gap: 30px;
+  }
+  .sidebar ul {
+    gap: 15px;
+  }
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  .sidebar {
+    font-size: larger;
+  }
+  .sidebar-login .login-btn {
+    padding: 10px 15px;
+    font-size: large;
+  }
+}
+
+/* --- Menu Item Borders --- */
+.menu-item {
+  border-bottom: 1px solid rgba(218, 165, 32, 0.35);
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* --- Dropdown Logic --- */
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.drop-caret {
+  cursor: pointer;
+  color: rgb(32, 146, 192);
+  padding: 5px 15px;
+  transition: transform 0.4s ease;
+  font-size: 24px;
+}
+
+.drop-caret.rotate {
+  transform: rotate(180deg);
+}
+
+/* --- Submenu (Hidden by default) --- */
+.submenu {
+  max-height: 0; /* Changed from 100% to 0 */
+  overflow: hidden;
+  list-style: none;
+  background: beige;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.4s ease-in-out;
+  padding: 0 5px;
+}
+
+.submenu.open {
+  max-height: 200px; /* Adjust based on content */
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.submenu li a {
+  font-size: 20px !important;
+  color: rgb(32, 146, 192) !important;
+  font-weight: 500 !important;
+}
+
+/* --- Hover Effects --- */
+.sidebar ul li a:hover {
+  color: teal !important;
+  padding-left: 10px;
+}
+
+.sidebar ul li a {
+  transition: all 0.3s ease;
+}
+
+/* Footer */
+
+/* --- Footer --- */
+.main-footer {
+  background: #192235;
+  color: #fff;
+  padding: 40px 4% 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 0.8fr 2fr;
+  gap: 80px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.footer-logo span {
+  color: rgb(32, 146, 192);
+}
+
+.footer-links,
+.footer-newsletter {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-links,
+  .footer-newsletter {
+    margin-top: 10px;
+  }
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+  color: rgb(32, 146, 192);
+  /* text-shadow: 0 0 8px rgba(139, 0, 0, 0.7); */
+  margin-bottom: 25px;
+}
+
+.footer-links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: cyan;
+}
+
+.news-input {
+  display: flex;
+  margin-top: 20px;
+}
+
+.news-input input {
+  background: #1e293b;
+  border: none;
+  padding: 15px;
+  color: #fff;
+  flex: 1;
+  border-radius: 4px 0 0 4px;
+}
+
+.news-input button {
+  background: rgb(32, 146, 192);
+  border: none;
+  color: #fff;
+  padding: 0 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.legal-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 968px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+main {
+  margin-top: 15vh;
+}
+
+@media screen and (max-width: 1180px) {
+  main {
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin-top: 8vh;
+  }
+}
+
+/*  */
+
+
+/* login */
+.Structure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 100px 0px;
+}
+
+.login-wrapper {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.login-card {
+  display: flex;
+
+  /* rgb(32, 146, 192) Glassmorphism */
+  background: rgba(59, 180, 255, 0.15);
+
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 0 40px rgb(32, 146, 192);
+  border: 1px solid rgb(32, 146, 192);
+}
+
+/* LEFT */
+
+.login-left {
+  flex: 1;
+  padding: 50px;
+  color: #fff;
+}
+
+.login-left h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* animated title */
+
+.login-left span {
+  color: transparent;
+  background: linear-gradient(120deg, rgb(32, 146, 192) 0%, #ffffff 50%, rgb(32, 146, 192) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}
+
+/* animation */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.login-left ul {
+  list-style: none;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+/* tip box */
+
+.tip {
+  width: 90%;
+  font-size: 14px;
+  opacity: 0.7;
+  padding: 10px 15px;
+  border: 2px solid rgb(32, 146, 192);
+  border-radius: 12px;
+  width: max-content;
+}
+
+.tabb {
+  text-decoration: none;
+  color: white;
+  padding: 6px 15px;
+  border: 1px solid rgb(32, 146, 192);
+  border-radius: 8px;
+  margin: 0px 5px;
+}
+
+.tabb:hover {
+  color: rgb(32, 146, 192);
+}
+
+/* RIGHT */
+
+.login-right {
+  flex: 1;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.login-right h2 {
+  font-size: 24px;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.login-right p {
+  margin-bottom: 30px;
+  opacity: 0.7;
+  text-align: start;
+}
+
+/* INPUT GROUP */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: rgb(32, 146, 192);
+  font-size: 14px;
+  font-weight: 600;
+  background: white !important;
+}
+
+/* PASSWORD */
+
+.password-group {
+  position: relative;
+}
+
+#togglePassword {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 13px;
+  color: rgb(32, 146, 192);
+  font-weight: 600;
+}
+
+/* forgot password */
+
+.forgot {
+  text-align: center;
+  font-size: 13px;
+  color: rgb(32, 146, 192);
+  text-decoration: none;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn1 {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  background: linear-gradient(90deg, rgb(32, 146, 192), #3b82f6);
+
+  color: #fff;
+  transition: 0.3s;
+  font-family: "Lora", serif;
+}
+
+.login-btn1:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* SIGNUP */
+
+.signup {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup p {
+  text-align: center;
+}
+
+.signup a {
+  color: rgb(32, 146, 192);
+  text-decoration: none;
+}
+
+/* ============================= */
+/* Tablet View (max-width: 992px) */
+/* ============================= */
+
+@media screen and (max-width: 992px) {
+  .Structure {
+    height: 100%;
+    padding: 40px 20px;
+  }
+
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-left,
+  .login-right {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .login-right h2,
+  .login-right p {
+    text-align: center;
+  }
+
+  .tip {
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* Mobile View (max-width: 600px) */
+/* ============================= */
+
+@media screen and (max-width: 600px) {
+  .Structure {
+    padding: 30px 20px;
+  }
+
+  .login-wrapper {
+    width: 95%;
+  }
+
+  .login-left,
+  .login-right {
+    padding: 20px;
+  }
+
+  .login-left h1 {
+    font-size: 22px;
+  }
+
+  .login-left ul {
+    font-size: 14px;
+  }
+
+  .tip {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .login-right h2 {
+    font-size: 20px;
+  }
+
+  .login-right p {
+    font-size: 13px;
+  }
+
+  .input-group input,
+  .input-group select {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .login-btn1 {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .signup {
+    font-size: 13px;
+  }
+
+  .tabb {
+    margin: 0px 2px;
+  }
+}
+
+/* extra small */
+
+@media screen and (max-width: 450px) {
+  .Structure {
+    padding: 50px 10px;
+  }
+}

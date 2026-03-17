@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio Tech</title>
+    <link rel="icon" href="./Assets/icon.webp" />
+    <link rel="stylesheet" href="./login.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header1">
+        <div class="container1">
+          <h3>Welcome to Stackly – Where Creators Connect</h3>
+        </div>
+        <div class="container2">
+          <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>(123)456-7890</p>
+          </div>
+          <div>
+            <i class="fa-regular fa-envelope"></i>
+            <p>Support@stackly.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="header2">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="div">
+          <nav>
+            <ul>
+              <li class="dropdown">
+                <a href="./index.html">Home</a>
+
+                <!-- <span class="drop-toggle">
+                  <i class="fa-solid fa-caret-down"></i>
+                </span> -->
+
+                <ul class="dropdown-menu">
+                  <li><a href="./index2.html">Home 2</a></li>
+                </ul>
+              </li>
+
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./service.html">Services</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <!-- <li><a href="./dashboard.html">Dashboard</a></li> -->
+            </ul>
+          </nav>
+
+          <div class="icons">
+            <div class="login">
+              <a href="./login.html">
+                <button class="log-btn">Login</button>
+              </a>
+            </div>
+
+            <div class="mobilebar">
+              <div class="hamburger-box">
+                <div class="hamburger">
+                  <div class="line line1"></div>
+                  <div class="line line2"></div>
+                  <div class="line line3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li class="has-dropdown menu-item">
+          <div class="dropdown-header">
+            <a href="./index.html">Home</a>
+            <!-- <span class="drop-caret" id="home-caret">▾</span> -->
+          </div>
+          <!-- <ul class="submenu" id="home-dropdown">
+            <li><a href="./index2.html">Home 2</a></li>
+          </ul> -->
+        </li>
+
+        <li class="menu-item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="./service.html">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li class="menu-item">
+          <a href="./contact.html">Contact Us</a>
+        </li>
+        <!-- <li class="menu-item">
+          <a href="./dashboard.html">Dashboard</a>
+        </li> -->
+        <li class="menu-item">
+          <a href="./login.html">Login</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-login">
+        <!-- <a href="./app.html">
+            <button class="login-btn">Buy Now</button>
+          </a> -->
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="Structure">
+      <div class="login-wrapper">
+        <div class="login-card">
+          <!-- LEFT SIDE -->
+          <div class="login-left">
+            <h1>Create your account on <span>Stackly Video Hub</span></h1>
+
+            <ul>
+              <li>✔ Upload and share videos with a global audience</li>
+              <li>✔ Discover trending videos and viral content</li>
+              <li>✔ Build your own creator channel</li>
+              <li>✔ Access powerful video management tools</li>
+              <li>✔ Join the next generation of digital creators</li>
+            </ul>
+
+            <div class="tip">
+              Tip: Press
+              <a href="./error.html" class="tabb"><strong>Tab</strong></a>
+              to move fields
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="login-right">
+            <h2>Login</h2>
+            <p>Access your Dashboard and Manage with Care.</p>
+
+            <form id="loginForm" action="./error.html">
+              <!-- ROLE -->
+              <div class="input-group">
+                <select id="role" required>
+                  <option value="">Login As</option>
+                  <option value="user">User</option>
+                  <option value="admin">Administrator</option>
+                </select>
+              </div>
+
+              <!-- EMAIL -->
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="you@gmail.com"
+                  required
+                />
+              </div>
+
+              <!-- PASSWORD -->
+              <div class="input-group password-group">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+                <span id="togglePassword">Show</span>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot"
+                >Forgot password?</a
+              >
+
+              <!-- <button type="submit" class="login-btn1">
+                Login to Dashboard
+              </button> -->
+              <button type="submit" class="login-btn1">Login</button>
+
+              <div class="signup">
+                <p>New here? <a href="./signup.html">Create an account</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-brand gsap-contact">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="./index.html">
+              <img
+                src="./Assets/logo.webp"
+                alt="Bio Tech - Logo"
+                style="max-width: 180px"
+              />
+            </a>
+          </div>
+
+          <p>
+            Discover the latest innovations in biotechnology, genetic research,
+            and healthcare science. Explore breakthroughs shaping the future of
+            medicine and life sciences.
+          </p>
+        </div>
+
+        <div class="footer-links gsap-contact">
+          <h4>Quick Links</h4>
+
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">Contact Us</a>
+          <a href="./login.html">Login</a>
+        </div>
+        <!-- <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+        </div> -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>
+            Stay updated with biotech discoveries, medical research, and
+            emerging innovations in life sciences and healthcare.
+          </p>
+          <form action="./error.html">
+            <div class="news-input">
+              <input type="email" placeholder="Email Address" required />
+              <button type="submit">→</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Innovations. All Rights Reserved.</p>
+        <div class="legal-links">
+          <a href="./error.html">Privacy Policy</a>
+          <a href="./error.html">ISO Compliance</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: "ease-out-cubic",
+    startEvent: "aos:ready", // manual trigger
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  const togglePassword = document.getElementById("togglePassword");
+  const password = document.getElementById("password");
+  const form = document.getElementById("loginForm");
+
+  // show / hide password
+  togglePassword.addEventListener("click", () => {
+    const type = password.type === "password" ? "text" : "password";
+    password.type = type;
+    togglePassword.textContent = type === "password" ? "Show" : "Hide";
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const role = document.getElementById("role").value;
+    const email = document.getElementById("email").value.trim();
+    const pass = password.value.trim();
+
+    const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+    if (!gmailPattern.test(email)) {
+      alert("Email must end with @gmail.com");
+      return;
+    }
+
+    if (pass !== "stackly@123") {
+      alert("Incorrect Password. Use: stackly@123");
+      return;
+    }
+
+    // redirect based on role
+    // redirect based on role
+    if (role === "user") {
+      sessionStorage.setItem("loggedInUser", email);
+      sessionStorage.setItem("role", "user");
+      window.location.href = "dashboard.html";
+    } else if (role === "admin") {
+      sessionStorage.setItem("loggedInUser", email);
+      sessionStorage.setItem("role", "admin");
+      window.location.href = "dashboard2.html";
+    } else {
+      alert("Please select login role");
+    }
+  });
+</script>

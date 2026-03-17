@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio Tech</title>
+    <link rel="icon" href="./Assets/icon.webp" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="brand">
+            <img src="./assets/logo.webp" alt="logo" class="logo" />
+          </a>
+          <button class="mobile-toggle" id="close-sidebar">
+            <span class="material-symbols-outlined"><i class="fa-solid fa-door-closed"></i></span>
+          </button>
+        </div>
+
+        <nav class="nav-menu">
+          <p class="nav-label">Facility Operations</p>
+          <button class="nav-item active" data-target="view-mission-control">
+            <span class="material-symbols-outlined"
+              ><i class="fa-solid fa-tachograph-digital"></i
+            ></span>
+            Mission Control
+          </button>
+          <button class="nav-item" data-target="view-samples">
+            <span class="material-symbols-outlined"
+              ><i class="fa-solid fa-flask"></i
+            ></span>
+            Sample Queue
+          </button>
+          <button class="nav-item" data-target="view-sequencers">
+            <span class="material-symbols-outlined"
+              ><i class="fa-solid fa-memory"></i
+            ></span>
+            Sequencers
+          </button>
+
+          <p class="nav-label">Footer</p>
+          <button
+            onclick="window.location.href = 'index.html'"
+            class="nav-item"
+          >
+            <span class="material-symbols-outlined"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i
+            ></span>
+            Back to Home
+          </button>
+          <button
+            onclick="window.location.href = 'login.html'"
+            class="nav-item"
+          >
+            <span class="material-symbols-outlined"
+              ><i class="fa-regular fa-circle-user"></i
+            ></span>
+            Logout
+          </button>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-navbar">
+          <div style="display: flex; align-items: center; gap: 20px">
+            <button class="mobile-toggle" id="open-sidebar">
+              <span class="material-symbols-outlined"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <h3
+              class="brand-font"
+              style="color: var(--text-muted); font-weight: 400"
+            >
+              Stackly Laboratory
+            </h3>
+          </div>
+          <div class="user-controls">
+            <button
+              onclick="window.location.href = './error.html'"
+              class="icon-btn"
+              style="position: relative"
+            >
+              <span class="material-symbols-outlined"
+                ><i class="fa-regular fa-bell"></i></span
+              ><span
+                style="
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 8px;
+                  height: 8px;
+                  background: var(--red);
+                  border-radius: 50%;
+                  border: 2px solid var(--bg-base);
+                "
+              ></span>
+            </button>
+            <div class="profile-menu-wrap">
+              <div class="avatar" id="profile-avatar">SV</div>
+
+              <div class="profile-dropdown glass-panel" id="profile-dropdown">
+                <div class="dropdown-user-info">
+                  <div
+                    class="avatar"
+                    style="width: 36px; height: 36px; font-size: 0.9rem"
+                  >
+                    SV
+                  </div>
+                  <div>
+                    <p class="dropdown-name">Dr. K. Voss</p>
+                    <p id="userEmailDisplay"></p>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="./error.html" class="dropdown-item">
+                  <span class="material-symbols-outlined"
+                    ><i class="fa-solid fa-user-doctor"></i
+                  ></span>
+                  My Profile
+                </a>
+                <a href="./error.html" class="dropdown-item">
+                  <span class="material-symbols-outlined"
+                    ><i class="fa-solid fa-gear"></i
+                  ></span>
+                  Preferences
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="login.html" class="dropdown-item logout-action">
+                  <span class="material-symbols-outlined"
+                    ><i class="fa-solid fa-right-from-bracket"></i
+                  ></span>
+                  Secure Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-body">
+          <section
+            id="view-mission-control"
+            class="content-section active-section"
+          >
+            <div style="margin-bottom: 32px">
+              <h1 class="page-title">Mission Control</h1>
+              <p style="color: var(--text-muted)">
+                <span class="live-indicator"></span> System Online • Last
+                updated just now
+              </p>
+            </div>
+
+            <div class="grid-4">
+              <div class="glass-panel" style="margin-bottom: 0">
+                <div class="kpi-header">
+                  <span>Active Samples</span>
+                  <span
+                    class="material-symbols-outlined"
+                    style="color: var(--cyan)"
+                    ><i class="fa-solid fa-dna"></i></span
+                  >
+                </div>
+                <div class="kpi-value">1,482</div>
+                <div
+                  style="
+                    color: var(--green);
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                  "
+                >
+                  +12% this week
+                </div>
+              </div>
+              <div class="glass-panel" style="margin-bottom: 0">
+                <div class="kpi-header">
+                  <span>Pipeline Efficiency</span>
+                  <span
+                    class="material-symbols-outlined"
+                    style="color: var(--purple)"
+                    ><i class="fa-solid fa-forward-fast"></i></span
+                  >
+                </div>
+                <div class="kpi-value">
+                  94<span style="font-size: 1.5rem; color: var(--text-muted)"
+                    >%</span
+                  >
+                </div>
+                <div
+                  style="
+                    color: var(--green);
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                  "
+                >
+                  Optimal Throughput
+                </div>
+              </div>
+              <div class="glass-panel" style="margin-bottom: 0">
+                <div class="kpi-header">
+                  <span>Pending QC Review</span>
+                  <span
+                    class="material-symbols-outlined"
+                    style="color: var(--amber)"
+                    ><i class="fa-solid fa-check-double"></i></span
+                  >
+                </div>
+                <div class="kpi-value">24</div>
+                <div
+                  style="
+                    color: var(--red);
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                  "
+                >
+                  3 Require attention
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-2-layout">
+              <div
+                class="glass-panel"
+                style="display: flex; flex-direction: column"
+              >
+                <div class="kpi-header" style="margin-bottom: 24px">
+                  <h3 style="color: var(--text-main); font-size: 1.1rem">
+                    Genomic Throughput Analysis
+                  </h3>
+                </div>
+                <div style="position: relative; height: 250px; width: 100%">
+                  <div class="canvas-holder">
+                    <canvas id="throughputChart"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass-panel">
+                <div class="kpi-header" style="margin-bottom: 24px">
+                  <h3 style="color: var(--text-main); font-size: 1.1rem">
+                    Live Sample Queue
+                  </h3>
+                </div>
+                <div class="table-container">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td
+                          style="
+                            font-family: &quot;DM Sans&quot;;
+                            font-weight: 500;
+                          "
+                        >
+                          SEQ-8821-A
+                        </td>
+                        <td>
+                          <span class="status-pill status-processing"
+                            >Library Prep</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-family: &quot;DM Sans&quot;;
+                            font-weight: 500;
+                          "
+                        >
+                          BIO-4490-C
+                        </td>
+                        <td>
+                          <span class="status-pill status-success"
+                            >QC Passed</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-family: &quot;DM Sans&quot;;
+                            font-weight: 500;
+                          "
+                        >
+                          EXT-1102-X
+                        </td>
+                        <td>
+                          <span class="status-pill status-warning"
+                            >Low Yield</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Pipeline Overview</h3>
+
+                <div style="display: flex; flex-direction: column; gap: 12px">
+                  <div>
+                    <p style="font-size: 0.85rem">Extraction</p>
+                    <div class="progress-track">
+                      <div
+                        class="progress-fill"
+                        style="width: 80%; background: var(--green)"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p style="font-size: 0.85rem">Library Prep</p>
+                    <div class="progress-track">
+                      <div
+                        class="progress-fill"
+                        style="width: 65%; background: var(--cyan)"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p style="font-size: 0.85rem">Sequencing</p>
+                    <div class="progress-track">
+                      <div
+                        class="progress-fill"
+                        style="width: 45%; background: var(--purple)"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Lab Activity Feed</h3>
+
+                <ul
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <li>🔬 Sample SEQ-8821 entered extraction pipeline</li>
+                  <li>🧬 Flowcell FC-882 completed sequencing</li>
+                  <li>📊 QC passed for RNA batch BIO-4490</li>
+                </ul>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Facility Status</h3>
+
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <p>Temperature: <strong>21.7°C</strong></p>
+                  <p>Humidity: <strong>44%</strong></p>
+                  <p>CO₂ Levels: <strong>405 ppm</strong></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="view-samples" class="content-section">
+            <div
+              class="myflex"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 32px;
+              "
+            >
+              <div>
+                <h1 class="page-title">Master Queue</h1>
+                <p style="color: var(--text-muted)">
+                  Manage accessioned samples across all cohorts and assays.
+                </p>
+              </div>
+              <button
+                onclick="window.location.href = './error.html'"
+                class="btn-primary"
+                style="display: flex; align-items: center; gap: 8px"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-size: 1.2rem"
+                  ><i class="fa-solid fa-plus"></i></span
+                >
+                Accession Batch
+              </button>
+            </div>
+
+            <div class="glass-panel">
+              <div style="display: flex; gap: 16px; margin-bottom: 24px">
+                <button
+                  onclick="window.location.href = './error.html'"
+                  class="icon-btn"
+                  style="
+                    border-radius: 8px;
+                    width: auto;
+                    padding: 0 16px;
+                    display: flex;
+                    gap: 8px;
+                  "
+                >
+                  <span class="material-symbols-outlined"><i class="fa-solid fa-filter"></i></span>
+                  Filters
+                </button>
+              </div>
+
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>UUID</th>
+                      <th>Assay Protocol</th>
+                      <th>Priority</th>
+                      <th>Location/Storage</th>
+                      <th>Current Stage</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="background: rgba(239, 68, 68, 0.05)">
+                      <td
+                        style="
+                          font-family: &quot;DM Sans&quot;;
+                          font-weight: 500;
+                        "
+                      >
+                        SEQ-0092-B
+                      </td>
+                      <td>Whole Genome Seq</td>
+                      <td>
+                        <span
+                          style="
+                            color: var(--red);
+                            font-weight: 600;
+                            font-size: 0.85rem;
+                          "
+                          ><span
+                            class="material-symbols-outlined"
+                            style="font-size: 1rem; vertical-align: middle"
+                            ><i class="fa-solid fa-bolt"></i></span
+                          >
+                          URGENT</span
+                        >
+                      </td>
+                      <td>Tray A4 • -80°C</td>
+                      <td>
+                        <span class="status-pill status-processing"
+                          ><span
+                            class="live-indicator"
+                            style="width: 6px; height: 6px"
+                          ></span>
+                          Processing</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          onclick="window.location.href = './error.html'"
+                          class="icon-btn"
+                          style="width: 32px; height: 32px"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            style="font-size: 1.1rem"
+                            ><i class="fa-solid fa-pen-to-square"></i></span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          font-family: &quot;DM Sans&quot;;
+                          font-weight: 500;
+                        "
+                      >
+                        BIO-7741-A
+                      </td>
+                      <td>Targeted RNA Panel</td>
+                      <td style="color: var(--text-muted); font-size: 0.85rem">
+                        Standard
+                      </td>
+                      <td>Tray B2 • 4°C</td>
+                      <td>
+                        <span class="status-pill status-success"
+                          >Accessioned</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          onclick="window.location.href = './error.html'"
+                          class="icon-btn"
+                          style="width: 32px; height: 32px"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            style="font-size: 1.1rem"
+                            ><i class="fa-solid fa-pen-to-square"></i></span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          font-family: &quot;DM Sans&quot;;
+                          font-weight: 500;
+                        "
+                      >
+                        BIO-7742-A
+                      </td>
+                      <td>Targeted RNA Panel</td>
+                      <td style="color: var(--text-muted); font-size: 0.85rem">
+                        Standard
+                      </td>
+                      <td>Tray B2 • 4°C</td>
+                      <td>
+                        <span class="status-pill status-success"
+                          >Accessioned</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          onclick="window.location.href = './error.html'"
+                          class="icon-btn"
+                          style="width: 32px; height: 32px"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            style="font-size: 1.1rem"
+                            ><i class="fa-solid fa-pen-to-square"></i></span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Queue Statistics</h3>
+
+                <p>Total Samples: <strong>1482</strong></p>
+                <p>In Processing: <strong>384</strong></p>
+                <p>Completed Today: <strong>112</strong></p>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Priority Samples</h3>
+
+                <ul style="display: flex; flex-direction: column; gap: 10px">
+                  <li>SEQ-0092-B — URGENT</li>
+                  <li>SEQ-0093-C — Oncology</li>
+                  <li>SEQ-0094-A — Clinical Trial</li>
+                </ul>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Assay Distribution</h3>
+
+                <p>Whole Genome: 620</p>
+                <p>RNA-Seq: 410</p>
+                <p>Microbiome: 320</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="view-sequencers" class="content-section">
+            <div style="margin-bottom: 32px">
+              <h1 class="page-title">Sequencer Telemetry</h1>
+              <p style="color: var(--text-muted)">
+                Real-time hardware status and active flowcell yields.
+              </p>
+            </div>
+
+            <div class="grid-3">
+              <div
+                class="glass-panel"
+                style="border-top: 2px solid var(--cyan)"
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 style="margin-bottom: 4px">NovaSeq 6000</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted)">
+                      Unit Alpha • Room 102
+                    </p>
+                  </div>
+                  <span
+                    class="status-pill status-processing"
+                    style="padding: 2px 8px; font-size: 0.65rem"
+                    ><span
+                      class="live-indicator"
+                      style="width: 6px; height: 6px"
+                    ></span>
+                    RUNNING</span
+                  >
+                </div>
+
+                <div
+                  style="
+                    margin-top: 24px;
+                    background: rgba(0, 0, 0, 0.2);
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: var(--border-subtle);
+                  "
+                >
+                  <p
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--text-muted);
+                      margin-bottom: 4px;
+                    "
+                  >
+                    Active Flowcell
+                  </p>
+                  <p
+                    style="
+                      font-weight: 500;
+                      font-family: monospace;
+                      font-size: 1.1rem;
+                    "
+                  >
+                    FC-HKL229-WGS
+                  </p>
+                </div>
+
+                <div style="margin-top: 24px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 0.85rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    <span>Cycle 150 of 300</span>
+                    <span style="color: var(--cyan)">50%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div
+                      class="progress-fill"
+                      style="
+                        width: 50%;
+                        background: linear-gradient(
+                          90deg,
+                          var(--cyan),
+                          var(--purple)
+                        );
+                        box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 24px;
+                    border-top: var(--border-subtle);
+                    padding-top: 16px;
+                  "
+                >
+                  <div>
+                    <p
+                      style="
+                        font-size: 0.7rem;
+                        color: var(--text-muted);
+                        text-transform: uppercase;
+                      "
+                    >
+                      Est. Yield
+                    </p>
+                    <p style="font-weight: 500">~1.8 Tb</p>
+                  </div>
+                  <div style="text-align: right">
+                    <p
+                      style="
+                        font-size: 0.7rem;
+                        color: var(--text-muted);
+                        text-transform: uppercase;
+                      "
+                    >
+                      Time Left
+                    </p>
+                    <p style="font-weight: 500">14h 22m</p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="glass-panel"
+                style="border-top: 2px solid var(--green)"
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 style="margin-bottom: 4px">MiSeq</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted)">
+                      Unit Beta • Room 102
+                    </p>
+                  </div>
+                  <span
+                    class="status-pill status-success"
+                    style="padding: 2px 8px; font-size: 0.65rem"
+                    >IDLE / READY</span
+                  >
+                </div>
+
+                <div
+                  style="
+                    margin-top: 24px;
+                    background: rgba(0, 0, 0, 0.2);
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: var(--border-subtle);
+                    text-align: center;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="
+                      font-size: 2rem;
+                      color: var(--text-muted);
+                      margin-bottom: 8px;
+                    "
+                    ><i class="fa-regular fa-circle-check"></i></span
+                  >
+                  <p style="font-size: 0.9rem; color: var(--text-muted)">
+                    Wash cycle complete. Ready for new flowcell.
+                  </p>
+                </div>
+
+                <button
+                  onclick="window.location.href = './error.html'"
+                  class="btn-primary"
+                  style="
+                    width: 100%;
+                    margin-top: 24px;
+                    background: rgba(255, 255, 255, 0.05);
+                    color: white;
+                    border: var(--border-subtle);
+                  "
+                >
+                  Initialize Run
+                </button>
+              </div>
+
+              <div
+                class="glass-panel"
+                style="border-top: 2px solid var(--amber)"
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 style="margin-bottom: 4px">NextSeq 2000</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted)">
+                      Unit Gamma • Room 104
+                    </p>
+                  </div>
+                  <span
+                    class="status-pill status-warning"
+                    style="padding: 2px 8px; font-size: 0.65rem"
+                    >MAINTENANCE</span
+                  >
+                </div>
+
+                <div
+                  style="
+                    margin-top: 24px;
+                    background: rgba(245, 158, 11, 0.05);
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: 1px solid rgba(245, 158, 11, 0.2);
+                  "
+                >
+                  <p
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--amber);
+                      margin-bottom: 4px;
+                    "
+                  >
+                    Error Code: E-4092
+                  </p>
+                  <p style="font-weight: 500; font-size: 0.9rem">
+                    Optical alignment calibration required before next run.
+                  </p>
+                </div>
+
+                <button
+                  onclick="window.location.href = './error.html'"
+                  class="btn-primary"
+                  style="
+                    width: 100%;
+                    margin-top: 24px;
+                    background: transparent;
+                    color: var(--amber);
+                    border: 1px solid var(--amber);
+                  "
+                >
+                  View Diagnostics
+                </button>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Run Performance</h3>
+
+                <p>Average Yield</p>
+                <h2>1.9 Tb</h2>
+
+                <p style="margin-top: 10px">Error Rate</p>
+                <h3 style="color: var(--green)">0.2%</h3>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Flowcell Queue</h3>
+
+                <ul style="display: flex; flex-direction: column; gap: 10px">
+                  <li>FC-2291 — Waiting</li>
+                  <li>FC-2292 — Ready</li>
+                  <li>FC-2293 — Scheduled</li>
+                </ul>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Maintenance Alerts</h3>
+
+                <p style="color: var(--amber)">NextSeq requires calibration</p>
+
+                <p style="margin-top: 10px">Last service: 3 days ago</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: "ease-out-cubic",
+    startEvent: "aos:ready", // manual trigger
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const userEmail = sessionStorage.getItem("userEmail");
+    const adminEmail = sessionStorage.getItem("adminEmail");
+
+    const displayEmail = userEmail || adminEmail;
+
+    if (displayEmail) {
+      document.getElementById("userEmailDisplay").textContent =
+        "Welcome, " + displayEmail;
+    } else {
+      window.location.href = "login.html";
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ✅ Get email (clean way)
+    const emailEl = document.getElementById("userEmailDisplay");
+    const email = sessionStorage.getItem("loggedInUser");
+
+    if (email) {
+      emailEl.textContent = "Welcome, " + email;
+    } else {
+      window.location.href = "login.html";
+    }
+
+    // ✅ Sidebar toggle
+    const sidebar = document.getElementById("sidebar");
+
+    document
+      .getElementById("open-sidebar")
+      .addEventListener("click", () => sidebar.classList.add("open"));
+
+    document
+      .getElementById("close-sidebar")
+      .addEventListener("click", () => sidebar.classList.remove("open"));
+
+    // ✅ Chart
+    const ctx = document.getElementById("throughputChart");
+
+    if (ctx) {
+      const context = ctx.getContext("2d");
+
+      let gradient = context.createLinearGradient(0, 0, 0, 250);
+      gradient.addColorStop(0, "rgba(0, 229, 255, 0.4)");
+      gradient.addColorStop(1, "rgba(0, 229, 255, 0.0)");
+
+      new Chart(context, {
+        type: "line",
+        data: {
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          datasets: [
+            {
+              label: "Samples",
+              data: [140, 210, 180, 320, 250, 390, 350],
+              borderColor: "#00E5FF",
+              backgroundColor: gradient,
+              fill: true,
+              tension: 0.4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+        },
+      });
+    }
+
+    // ✅ Navigation tabs
+    const navItems = document.querySelectorAll(".nav-item[data-target]");
+    const contentSections = document.querySelectorAll(".content-section");
+
+    navItems.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        navItems.forEach((nav) => nav.classList.remove("active"));
+        item.classList.add("active");
+
+        contentSections.forEach((section) =>
+          section.classList.remove("active-section"),
+        );
+
+        const targetId = item.getAttribute("data-target");
+        document.getElementById(targetId)?.classList.add("active-section");
+
+        if (window.innerWidth <= 768) {
+          sidebar.classList.remove("open");
+        }
+      });
+    });
+
+    // ✅ Profile dropdown (FIXED inside DOMContentLoaded)
+    const avatarBtn = document.getElementById("profile-avatar");
+    const profileDropdown = document.getElementById("profile-dropdown");
+
+    if (avatarBtn && profileDropdown) {
+      avatarBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        profileDropdown.classList.toggle("show");
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          profileDropdown.classList.contains("show") &&
+          !profileDropdown.contains(event.target)
+        ) {
+          profileDropdown.classList.remove("show");
+        }
+      });
+    }
+  });
+</script>

@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio Tech</title>
+    <link rel="icon" href="./Assets/icon.webp" />
+    <link rel="stylesheet" href="./blog.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header1">
+        <div class="container1">
+          <h3>Welcome to Stackly – Where Creators Connect</h3>
+        </div>
+        <div class="container2">
+          <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>(123)456-7890</p>
+          </div>
+          <div>
+            <i class="fa-regular fa-envelope"></i>
+            <p>Support@stackly.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="header2">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="div">
+          <nav>
+            <ul>
+              <li class="dropdown">
+                <a href="./index.html">Home</a>
+
+                <!-- <span class="drop-toggle">
+                  <i class="fa-solid fa-caret-down"></i>
+                </span> -->
+
+                <ul class="dropdown-menu">
+                  <li><a href="./index2.html">Home 2</a></li>
+                </ul>
+              </li>
+
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./service.html">Services</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <!-- <li><a href="./dashboard.html">Dashboard</a></li> -->
+            </ul>
+          </nav>
+
+          <div class="icons">
+            <div class="login">
+              <a href="./login.html">
+                <button class="log-btn">Login</button>
+              </a>
+            </div>
+
+            <div class="mobilebar">
+              <div class="hamburger-box">
+                <div class="hamburger">
+                  <div class="line line1"></div>
+                  <div class="line line2"></div>
+                  <div class="line line3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li class="has-dropdown menu-item">
+          <div class="dropdown-header">
+            <a href="./index.html">Home</a>
+            <!-- <span class="drop-caret" id="home-caret">▾</span> -->
+          </div>
+          <!-- <ul class="submenu" id="home-dropdown">
+            <li><a href="./index2.html">Home 2</a></li>
+          </ul> -->
+        </li>
+
+        <li class="menu-item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="./service.html">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li class="menu-item">
+          <a href="./contact.html">Contact Us</a>
+        </li>
+        <!-- <li class="menu-item">
+          <a href="./dashboard.html">Dashboard</a>
+        </li> -->
+        <li class="menu-item">
+          <a href="./login.html">Login</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-login">
+        <!-- <a href="./app.html">
+            <button class="login-btn">Buy Now</button>
+          </a> -->
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="blog-hero-hub" id="blog-hero">
+      <div class="hero-backdrop">
+        <img
+          src="./Assets/Neural Computing Circuitry_11zon.webp"
+          alt="Neural Computing Circuitry"
+          class="gsap-hero-img"
+        />
+        <div class="matrix-overlay"></div>
+      </div>
+
+      <div class="container hero-layout">
+        <div class="hero-text-content">
+          <div class="badge-wrapper gsap-hero-reveal">
+            <span class="hub-badge">Intellectual Foundry</span>
+          </div>
+
+          <h1 class="gsap-hero-reveal">
+            Foundry <span class="text-accent">Insights</span> & Genomic
+            Intelligence
+          </h1>
+
+          <p class="gsap-hero-reveal">
+            The premier source for research breakthroughs at the nexus of
+            extreme-scale computing and biological programming. We translate
+            complex molecular data into actionable strategic intelligence.
+          </p>
+
+          <div class="hero-actions gsap-hero-reveal">
+            <a href="./error.html" class="btn btn-primary">Latest Research</a>
+            <a href="./error.html" class="btn btn-secondary"
+              >Technical Briefings</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-diagnostic-card gsap-hero-card">
+          <div class="card-inner">
+            <div class="card-header">
+              <span class="hub-tag">Data_Stream_01</span>
+              <span class="status-indicator"></span>
+            </div>
+
+            <div class="card-body">
+              <div class="metric-row">
+                <span class="label">Sequence Fidelity</span>
+                <span class="value">99.998%</span>
+              </div>
+              <div class="metric-row">
+                <span class="label">Processing Load</span>
+                <div class="bar-container">
+                  <div class="bar-fill gsap-bar-animate"></div>
+                </div>
+              </div>
+              <div class="terminal-text">
+                <code>> RUNNING_BIO_SIM_V4...</code><br />
+                <code>> OPTIMIZING PROTEIN_FOLD...</code>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="version-code">v.7.2.0_ALPHA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-archive-section">
+      <div class="container">
+        <div class="archive-header gsap-reveal">
+          <span class="hub-tag">Knowledge Repository</span>
+          <h2>Foundry <span class="text-accent">Intelligence</span></h2>
+
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">
+              All_Data
+            </button>
+            <button class="filter-btn" data-filter="research">
+              Research_Papers
+            </button>
+            <button class="filter-btn" data-filter="technical">
+              Technical_Briefs
+            </button>
+            <button class="filter-btn" data-filter="strategic">
+              Strategic_Updates
+            </button>
+          </div>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+          <article class="blog-card gsap-card" data-category="research">
+            <div class="card-media">
+              <img
+                src="./Assets/Molecular Research2_11zon.webp"
+                alt="Molecular Research"
+              />
+              <span class="card-tag">Research</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">15 MAR 2026</span>
+              <h3>Synthesizing Resilience: Protein Sculpting</h3>
+              <p>
+                AI-driven folding algorithms are shortening the bridge between
+                hypothesis and clinical application.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="technical">
+            <div class="card-media">
+              <img
+                src="./Assets/Lab Automation_11zon_11zon.webp"
+                alt="Lab Automation"
+              />
+              <span class="card-tag">Technical</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">12 MAR 2026</span>
+              <h3>Neural-Link Lab Automation Alpha-4</h3>
+              <p>
+                Integration of real-time sensor feedback into modular robotic
+                liquid handling systems.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="strategic">
+            <div class="card-media">
+              <img
+                src="./Assets/Global Security_11zon.webp"
+                alt="Global Security"
+              />
+              <span class="card-tag">Strategic</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">10 MAR 2026</span>
+              <h3>The Bio-Security Protocol v2.1</h3>
+              <p>
+                Updating sovereign data encryption for cross-border genomic
+                transmission.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="research">
+            <div class="card-media">
+              <img
+                src="./Assets/Molecular Synthesis Visualization_11zon_11zon.webp"
+                alt="Molecular Research"
+              />
+              <span class="card-tag">Research</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">15 MAR 2026</span>
+              <h3>Synthesizing Resilience: Protein Sculpting</h3>
+              <p>
+                AI-driven folding algorithms are shortening the bridge between
+                hypothesis and clinical application.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="technical">
+            <div class="card-media">
+              <img
+                src="./Assets/Lab Automation2_11zon.webp"
+                alt="Lab Automation"
+              />
+              <span class="card-tag">Technical</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">12 MAR 2026</span>
+              <h3>Neural-Link Lab Automation Alpha-4</h3>
+              <p>
+                Integration of real-time sensor feedback into modular robotic
+                liquid handling systems.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="strategic">
+            <div class="card-media">
+              <img
+                src="./Assets/Global Network Visualization_11zon_11zon.webp"
+                alt="Global Security"
+              />
+              <span class="card-tag">Strategic</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">10 MAR 2026</span>
+              <h3>The Bio-Security Protocol v2.1</h3>
+              <p>
+                Updating sovereign data encryption for cross-border genomic
+                transmission and IP protection.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="research">
+            <div class="card-media">
+              <img
+                src="./Assets/Microscopy_11zon.webp"
+                alt="Microscopy"
+              />
+              <span class="card-tag">Research</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">08 MAR 2026</span>
+              <h3>CRISPR-Cas13: Viral Intervention</h3>
+              <p>
+                New methodologies in RNA-targeting to neutralize airborne
+                pathogens in real-time environments.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="technical">
+            <div class="card-media">
+              <img
+                src="./Assets/Hardware_11zon.webp"
+                alt="Hardware"
+              />
+              <span class="card-tag">Technical</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">05 MAR 2026</span>
+              <h3>GPU-Accelerated Sequence Assembly</h3>
+              <p>
+                Benchmarking the 2026 "Bio-Compute" cluster for rapid de novo
+                genome reconstruction.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="strategic">
+            <div class="card-media">
+              <img
+                src="./Assets/Infrastructure_11zon_11zon.webp"
+                alt="Infrastructure"
+              />
+              <span class="card-tag">Strategic</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">01 MAR 2026</span>
+              <h3>Foundry Sovereignty in Q4</h3>
+              <p>
+                Strategic localization of bioreactor hubs to ensure supply chain
+                resilience against global shifts.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="research">
+            <div class="card-media">
+              <img
+                src="./Assets/Cellular Biology_11zon.webp"
+                alt="Cellular Biology"
+              />
+              <span class="card-tag">Research</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">28 FEB 2026</span>
+              <h3>Metabolic Pathway Re-Engineering</h3>
+              <p>
+                Optimization of yeast strains for the high-yield production of
+                therapeutic alkaloids.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="technical">
+            <div class="card-media">
+              <img
+                src="./Assets/Data Visualization_11zon.webp"
+                alt="Data Visualization"
+              />
+              <span class="card-tag">Technical</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">25 FEB 2026</span>
+              <h3>Digital Twin Lab Integration</h3>
+              <p>
+                Utilizing high-fidelity simulations to predict bioreactor
+                performance before physical initiation.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+
+          <article class="blog-card gsap-card" data-category="strategic">
+            <div class="card-media">
+              <img
+                src="./Assets/Ethics_11zon_11zon.webp"
+                alt="Ethics"
+              />
+              <span class="card-tag">Strategic</span>
+            </div>
+            <div class="card-body">
+              <span class="card-date">20 FEB 2026</span>
+              <h3>Ethics of Synthetic Life-Forms</h3>
+              <p>
+                Establishing the global standard for the containment and
+                monitoring of non-natural organisms.
+              </p>
+              <a href="./error.html" class="read-more">Analyze Data →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="intelligence-news-section" id="research-news">
+      <div class="container">
+        <div class="module-header gsap-reveal">
+          <span class="hub-tag">Node_01 // Live_Feed</span>
+          <h2>Latest Research <span class="text-accent">News</span></h2>
+        </div>
+
+        <div class="news-main-grid">
+          <article class="news-blade gsap-reveal-left">
+            <div class="blade-media">
+              <img
+                src="./Assets/Molecular Synthesis Visualization_11zon_11zon.webp"
+                alt="Molecular Synthesis Visualization"
+              />
+              <div class="blade-tag">Top Priority</div>
+            </div>
+            <div class="blade-content">
+              <span class="meta">REF_ID: 9942-X | 17 MAR 2026</span>
+              <h3>Bio-mimetic Membrane Synthesis: Phase II Results</h3>
+              <p>
+                Foundry researchers have successfully achieved 98% purity in
+                synthetic ATP-ase integration, marking a significant milestone
+                in synthetic cellular respiration.
+              </p>
+              <a href="./error.html" class="btn-link">Analyze Full Trace →</a>
+            </div>
+          </article>
+
+          <div class="news-brief-stack gsap-reveal-right">
+            <div class="brief-item">
+              <span class="time">04H AGO</span>
+              <h4>Graphene-Oxide Substrate Optimization</h4>
+              <p>
+                Increasing nanopore sequencing speeds by 40% in clinical trials.
+              </p>
+            </div>
+            <div class="brief-item">
+              <span class="time">09H AGO</span>
+              <h4>Non-Invasive Neural Mapping v4.0</h4>
+              <p>
+                Signal-to-noise ratio enhancements in modular sensor arrays.
+              </p>
+            </div>
+            <div class="brief-item">
+              <span class="time">1D AGO</span>
+              <h4>Cryo-EM Structural Discovery</h4>
+              <p>Visualizing protein-ligand interactions at 1.2Å resolution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="industry-trends-section" id="trends">
+      <div class="container">
+        <div class="module-header gsap-reveal">
+          <h2>Industry <span class="text-accent">Trends</span></h2>
+        </div>
+
+        <div class="trends-data-grid">
+          <div class="trend-card gsap-card">
+            <div class="trend-visual">
+              <span class="data-value">84%</span>
+              <svg class="data-ring" viewBox="0 0 100 100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="rgba(32, 146, 192, 0.1)"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="rgb(32, 146, 192)"
+                  stroke-width="3"
+                  stroke-dasharray="282"
+                  stroke-dashoffset="45"
+                />
+              </svg>
+            </div>
+            <h5>Cloud-Lab Migration</h5>
+            <p>
+              Strategic shift toward remote-operated wet-labs for rapid
+              prototyping.
+            </p>
+          </div>
+
+          <div class="trend-card gsap-card">
+            <div class="trend-visual">
+              <span class="data-value">02ms</span>
+            </div>
+            <h5>Latency Optimization</h5>
+            <p>
+              New 6G integration standards for real-time remote surgical
+              intervention.
+            </p>
+          </div>
+
+          <div class="trend-card gsap-card">
+            <div class="trend-visual">
+              <span class="data-value">Q4_26</span>
+            </div>
+            <h5>Bio-Sovereignty</h5>
+            <p>
+              Localization of manufacturing hubs to ensure global supply chain
+              resilience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-brand gsap-contact">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="./index.html">
+              <img
+                src="./Assets/logo.webp"
+                alt="Bio Tech - Logo"
+                style="max-width: 180px"
+              />
+            </a>
+          </div>
+
+          <p>
+            Discover the latest innovations in biotechnology, genetic research,
+            and healthcare science. Explore breakthroughs shaping the future of
+            medicine and life sciences.
+          </p>
+        </div>
+
+        <div class="footer-links gsap-contact">
+          <h4>Quick Links</h4>
+
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">Contact Us</a>
+          <a href="./login.html">Login</a>
+        </div>
+        <!-- <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+        </div> -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>
+            Stay updated with biotech discoveries, medical research, and
+            emerging innovations in life sciences and healthcare.
+          </p>
+          <form action="./error.html">
+            <div class="news-input">
+              <input type="email" placeholder="Email Address" required />
+              <button type="submit">→</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Innovations. All Rights Reserved.</p>
+        <div class="legal-links">
+          <a href="./error.html">Privacy Policy</a>
+          <a href="./error.html">ISO Compliance</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: "ease-out-cubic",
+    startEvent: "aos:ready", // manual trigger
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- hero -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const masterTl = gsap.timeline();
+
+    // 1. Background Arrival
+    masterTl.fromTo(
+      ".gsap-hero-img",
+      { autoAlpha: 0, scale: 1.1 },
+      { autoAlpha: 0.15, scale: 1, duration: 2.5, ease: "power2.out" },
+    );
+
+    // 2. Text Reveal (Staggered Upward)
+    masterTl.fromTo(
+      ".gsap-hero-reveal",
+      { autoAlpha: 0, y: 40 },
+      { autoAlpha: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" },
+      "-=1.8",
+    );
+
+    // 3. Diagnostic Card Arrival
+    masterTl.fromTo(
+      ".gsap-hero-card",
+      { autoAlpha: 0, x: 50 },
+      { autoAlpha: 1, x: 0, duration: 1.2, ease: "back.out(1.2)" },
+      "-=1",
+    );
+
+    // 4. Functional UI Animation (Bar Graph)
+    masterTl.to(
+      ".gsap-bar-animate",
+      {
+        width: "78%",
+        duration: 2,
+        ease: "expo.out",
+      },
+      "-=0.2",
+    );
+
+    // Persistent Subtle Float for the card
+    gsap.to(".gsap-hero-card", {
+      y: 10,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  });
+</script>
+
+<!-- 2 , 3 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Initial Load Animation
+    const loadTl = gsap.timeline();
+    loadTl
+      .fromTo(
+        ".gsap-reveal",
+        { autoAlpha: 0, y: 30 },
+        { autoAlpha: 1, y: 0, duration: 1 },
+      )
+      .fromTo(
+        ".gsap-card",
+        { autoAlpha: 0, y: 40 },
+        { autoAlpha: 1, y: 0, duration: 0.8, stagger: 0.15 },
+        "-=0.6",
+      );
+
+    // Logic: Category Filtering
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const blogCards = document.querySelectorAll(".blog-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove active class from all
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filterValue = button.getAttribute("data-filter");
+
+        // Superior UX: Fade out grid, re-sort, and fade in
+        gsap.to(".blog-grid", {
+          opacity: 0,
+          y: 10,
+          duration: 0.3,
+          onComplete: () => {
+            blogCards.forEach((card) => {
+              const cardCategory = card.getAttribute("data-category");
+              if (filterValue === "all" || filterValue === cardCategory) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+
+            // Re-animate the visible cards
+            gsap.to(".blog-grid", { opacity: 1, y: 0, duration: 0.5 });
+            gsap.fromTo(
+              ".blog-card[style='display: block;']",
+              { opacity: 0, scale: 0.95 },
+              { opacity: 1, scale: 1, duration: 0.4, stagger: 0.1 },
+            );
+          },
+        });
+      });
+    });
+  });
+</script>
+
+<!-- 3 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Module Header Reveal
+    gsap.fromTo(
+      ".gsap-reveal",
+      { autoAlpha: 0, y: 30 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: { trigger: ".gsap-reveal", start: "top 85%" },
+      },
+    );
+
+    // 2. News Section Animation
+    gsap.fromTo(
+      ".gsap-reveal-left",
+      { autoAlpha: 0, x: -50 },
+      {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: { trigger: ".news-main-grid", start: "top 75%" },
+      },
+    );
+    gsap.fromTo(
+      ".gsap-reveal-right",
+      { autoAlpha: 0, x: 50 },
+      {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: { trigger: ".news-main-grid", start: "top 75%" },
+      },
+    );
+
+    // 3. Trend Cards Staggered load
+    gsap.fromTo(
+      ".gsap-card",
+      { autoAlpha: 0, scale: 0.9 },
+      {
+        autoAlpha: 1,
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: { trigger: ".trends-data-grid", start: "top 80%" },
+      },
+    );
+
+    // 4. UX Enhancement: Image Pan
+    gsap.to(".blade-media img", {
+      scale: 1.1,
+      duration: 10,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const briefItems = document.querySelectorAll(".brief-item");
+
+    briefItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        window.location.href = "./error.html";
+      });
+    });
+  });
+</script>

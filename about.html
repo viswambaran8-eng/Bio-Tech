@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio Tech</title>
+    <link rel="icon" href="./Assets/icon.webp" />
+    <link rel="stylesheet" href="./about.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header1">
+        <div class="container1">
+          <h3>Welcome to Stackly – Where Creators Connect</h3>
+        </div>
+        <div class="container2">
+          <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>(123)456-7890</p>
+          </div>
+          <div>
+            <i class="fa-regular fa-envelope"></i>
+            <p>Support@stackly.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="header2">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="div">
+          <nav>
+            <ul>
+              <li class="dropdown">
+                <a href="./index.html">Home</a>
+
+                <!-- <span class="drop-toggle">
+                  <i class="fa-solid fa-caret-down"></i>
+                </span> -->
+
+                <ul class="dropdown-menu">
+                  <li><a href="./index2.html">Home 2</a></li>
+                </ul>
+              </li>
+
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./service.html">Services</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <!-- <li><a href="./dashboard.html">Dashboard</a></li> -->
+            </ul>
+          </nav>
+
+          <div class="icons">
+            <div class="login">
+              <a href="./login.html">
+                <button class="log-btn">Login</button>
+              </a>
+            </div>
+
+            <div class="mobilebar">
+              <div class="hamburger-box">
+                <div class="hamburger">
+                  <div class="line line1"></div>
+                  <div class="line line2"></div>
+                  <div class="line line3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li class="has-dropdown menu-item">
+          <div class="dropdown-header">
+            <a href="./index.html">Home</a>
+            <!-- <span class="drop-caret" id="home-caret">▾</span> -->
+          </div>
+          <!-- <ul class="submenu" id="home-dropdown">
+            <li><a href="./index2.html">Home 2</a></li>
+          </ul> -->
+        </li>
+
+        <li class="menu-item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="./service.html">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li class="menu-item">
+          <a href="./contact.html">Contact Us</a>
+        </li>
+        <!-- <li class="menu-item">
+          <a href="./dashboard.html">Dashboard</a>
+        </li> -->
+        <li class="menu-item">
+          <a href="./login.html">Login</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-login">
+        <!-- <a href="./app.html">
+            <button class="login-btn">Buy Now</button>
+          </a> -->
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="bio-foundry-hero" id="about-hero">
+      <div class="hero-backdrop gsap-hero-backdrop">
+        <div class="grid-pattern"></div>
+        <div class="vignette-overlay"></div>
+      </div>
+
+      <div class="container foundry-container">
+        <div class="foundry-left gsap-hero-left">
+          <div class="status-badge">
+            <span class="pulse-icon"></span>
+            Institutional Grade Bio-Foundry
+          </div>
+
+          <h1>
+            Engineering the <br />Future of
+            <span class="text-blue">Molecular Logic</span>
+          </h1>
+
+          <p class="hero-description">
+            Our platform is the nexus where computational intelligence meets
+            biological reality. We have synthesized over 14.2 billion base pairs
+            of de novo DNA, enabling global research institutions to bypass
+            conventional wet-lab bottlenecks and access truly programmable
+            genetic engineering.
+          </p>
+
+          <div class="hero-feature-highlights">
+            <div class="h-feature">
+              <span class="feat-icon">🧬</span>
+              <div class="feat-text">
+                <strong>99.997% Fidelity</strong>
+                <p>Industry-leading sequence accuracy at scale.</p>
+              </div>
+            </div>
+            <div class="h-feature">
+              <span class="feat-icon">💻</span>
+              <div class="feat-text">
+                <strong>In Silico Predictive Modeling</strong>
+                <p>AI-driven protein folding visualization.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="./error.html" class="btn-primary">Explore Our Vision</a>
+            <div class="trusted-by">
+              <div class="avatar-stack">
+                <img src="./Assets/team1_11zon.webp" alt="Partner" />
+                <img src="./Assets/team2_11zon.webp" alt="Partner" />
+                <img src="./Assets/team3_11zon.webp" alt="Partner" />
+              </div>
+              <span>Validated by 450+ Labs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="foundry-right gsap-hero-right">
+          <div class="diagnostic-card">
+            <div class="card-header">
+              <h3>System Diagnostic</h3>
+              <span class="version-code">v.7.1.0_Alpha</span>
+            </div>
+
+            <div class="card-body">
+              <div class="stat-row">
+                <div class="stat-meta">
+                  <span>Processing Throughput</span>
+                  <span class="stat-value">8.4 Tb/s</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill gsap-bar-fill"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="stat-row">
+                <div class="stat-meta">
+                  <span>Neural-Link Latency</span>
+                  <span class="stat-value">&lt; 140ms</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill gsap-bar-fill"
+                    style="width: 94%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="visual-scanner-container">
+                <img
+                  src="./Assets/Microscopic Analysis Visualization_11zon.webp"
+                  alt="Microscopic Analysis Visualization"
+                />
+                <div class="scanner-beam"></div>
+              </div>
+
+              <p class="diagnostic-caption">
+                Real-time analysis: CRISPR-Cas12 diagnostics targeting
+                SARS-CoV-2 RNA fragments. Confidence Interval: 99.98%.
+              </p>
+            </div>
+
+            <div class="card-footer">
+              <div class="footer-stat">
+                <span>Nodes Active</span><strong>1,240</strong>
+              </div>
+              <div class="footer-stat">
+                <span>Data Encrypted</span><strong>Yes (ISO 27001)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio-purpose-section">
+      <div class="container">
+        <div class="purpose-grid">
+          <div class="purpose-card gsap-reveal-up">
+            <div class="card-tag">Operational Mandate</div>
+            <div class="card-icon">🎯</div>
+            <h2>Our <span class="text-red">Mission</span></h2>
+            <p>
+              To architect the next generation of medical intervention by
+              standardizing biological components. We are committed to reducing
+              the complexity of genetic engineering, making precision medicine
+              accessible, scalable, and ethically sound for global healthcare
+              infrastructures.
+            </p>
+            <ul class="purpose-list">
+              <li>Accelerating clinical trial throughput via automation</li>
+              <li>
+                Standardizing Bio-Manufacturing protocols for global scale
+              </li>
+              <li>Open-access genomic data security and sovereign privacy</li>
+            </ul>
+          </div>
+
+          <div class="purpose-card gsap-reveal-up">
+            <div class="card-tag">2050 Horizon</div>
+            <div class="card-icon">👁️</div>
+            <h2>Our <span class="text-red">Vision</span></h2>
+            <p>
+              We envision a post-disease era where biological systems are as
+              programmable and predictable as software. By 2050, our platform
+              aims to be the foundational OS for planetary health, restoring
+              ecosystems and extending human vitality through molecular
+              intelligence.
+            </p>
+            <ul class="purpose-list">
+              <li>Universal genetic health equity across all demographics</li>
+              <li>Carbon-negative biosynthetic materials for infrastructure</li>
+              <li>Real-time pathogen neutralizing networks and biodefense</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-areas">
+      <div class="container">
+        <div class="section-header gsap-reveal-up">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">
+            Research <span class="text-red">Frontiers</span>
+          </h2>
+          <p class="section-subtitle">
+            Pushing the boundaries of molecular engineering through three
+            primary disciplines.
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <div class="research-item gsap-research-card">
+            <div class="research-img">
+              <img
+                src="./Assets/Genomic Computation_11zon.webp"
+                alt="Genomic Computation"
+              />
+            </div>
+            <div class="research-content">
+              <h3>Genomic Computation</h3>
+              <p>
+                Utilizing high-throughput sequencing and neural-link AI to map
+                polygenic risk factors in real-time for preventative therapy.
+              </p>
+              <a href="./error.html" class="research-link">Explore Pipeline →</a>
+            </div>
+          </div>
+
+          <div class="research-item gsap-research-card">
+            <div class="research-img">
+              <img
+                src="./Assets/Synthetic Biology_11zon.webp"
+                alt="Synthetic Biology"
+              />
+            </div>
+            <div class="research-content">
+              <h3>Synthetic Foundry</h3>
+              <p>
+                Engineering microbial chassis for the decentralized production
+                of rare pharmaceutical compounds and life-saving reagents.
+              </p>
+              <a href="./error.html" class="research-link">Explore Pipeline →</a>
+            </div>
+          </div>
+
+          <div class="research-item gsap-research-card">
+            <div class="research-img">
+              <img
+                src="./Assets/Bio-Mechanical_11zon.webp"
+                alt="Bio-Mechanical"
+              />
+            </div>
+            <div class="research-content">
+              <h3>Nano-Robotics</h3>
+              <p>
+                Developing molecular delivery vehicles for targeted oncological
+                treatment at the cellular level, minimizing systemic toxicity.
+              </p>
+              <a href="./error.html" class="research-link">Explore Pipeline →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="innovation-tech-hub">
+      <div class="container">
+        <div class="section-header-centered gsap-innov-reveal">
+          <span class="hub-tag">The Tech Stack</span>
+          <h2>Integrated <span class="text-accent">Bio-Intelligence</span></h2>
+        </div>
+
+        <div class="tech-blueprint-grid">
+          <div class="blueprint-card gsap-innov-card">
+            <div class="blueprint-number">01</div>
+            <h3>Neural-Link Sequencing</h3>
+            <p>
+              A proprietary hardware-software interface that reduces
+              signal-to-noise ratios in long-read sequencing by 40%, allowing
+              for unprecedented genomic clarity.
+            </p>
+            <div class="tech-specs">
+              <span>Latency: < 12ms</span>
+              <span>Throughput: 4.2 PB/yr</span>
+            </div>
+          </div>
+
+          <div class="blueprint-card gsap-innov-card">
+            <div class="blueprint-number">02</div>
+            <h3>Automated Lab-on-Chip</h3>
+            <p>
+              Microfluidic arrays capable of running 10,000 simultaneous CRISPR
+              assays with zero human intervention, ensuring sterile precision at
+              scale.
+            </p>
+            <div class="tech-specs">
+              <span>Fidelity: 99.98%</span>
+              <span>Volume: 2.5µL/well</span>
+            </div>
+          </div>
+
+          <div class="blueprint-card gsap-innov-card">
+            <div class="blueprint-number">03</div>
+            <h3>AI Protein Sculptor</h3>
+            <p>
+              Our deep-learning engine predicts tertiary structures of novel
+              enzymes, bypassing months of crystallographic verification.
+            </p>
+            <div class="tech-specs">
+              <span>Model: Bio-GPT 4</span>
+              <span>Confidence: 94.2%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scientific-team">
+      <div class="container">
+        <div class="team-layout">
+          <div class="team-info gsap-team-reveal">
+            <span class="hub-tag">The Minds</span>
+            <h2>Sovereign <span class="text-accent">Expertise</span></h2>
+            <p>
+              Our team comprises 120+ PhDs from the world’s leading genomic
+              institutions, united by a single goal: making biology
+              programmable.
+            </p>
+            <div class="team-cta">
+              <a href="./error.html">
+                <button class="btn-outline">View Publications</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-card gsap-team-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets/Chief Scientist_11zon.webp"
+                  alt="Chief Scientist"
+                />
+              </div>
+              <div class="member-details">
+                <h4>Dr. Elena Voss</h4>
+                <span>Chief of Genomics</span>
+              </div>
+            </div>
+            <div class="team-card gsap-team-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets/Head of AI_11zon.webp"
+                  alt="Head of AI"
+                />
+              </div>
+              <div class="member-details">
+                <h4>Marcus Thorne</h4>
+                <span>Head of Computational Biology</span>
+              </div>
+            </div>
+            <div class="team-card gsap-team-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets/Engineering Lead_11zon.webp"
+                  alt="Engineering Lead"
+                />
+              </div>
+              <div class="member-details">
+                <h4>Sarah Al-Fayed</h4>
+                <span>Automation Lead</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="global-network-hub">
+      <div class="container">
+        <div class="network-layout">
+          <div class="network-info gsap-network-reveal">
+            <span class="hub-tag">Strategic Alliance</span>
+            <h2>
+              Unifying the <span class="text-accent">Biotech Foundry</span>
+            </h2>
+            <p>
+              We are a localized engine with global reach. Our platform
+              facilitates distributed research pipelines, allowing an AI
+              specialist in Tokyo to sculpt a protein that is synthesized
+              on-demand in our Boston lab, verified by a clinical trial manager
+              in London.
+            </p>
+
+            <div class="network-stats">
+              <div class="net-stat">
+                <strong>24/7</strong><span>Global Uptime</span>
+              </div>
+              <div class="net-stat">
+                <strong>14</strong><span>Secure Data Nodes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="network-visual gsap-network-card">
+            <div class="visual-wrapper">
+              <img
+                src="./Assets/Global Network Visualization_11zon_11zon.webp"
+                alt="Global Network Visualization"
+              />
+              <div class="connection-dots">
+                <span class="dot d1"></span><span class="dot d2"></span
+                ><span class="dot d3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="biotech-horizon">
+      <div class="container">
+        <div class="section-header-centered gsap-future-reveal">
+          <span class="hub-tag">The 2050 Goal</span>
+          <h2>Our Molecular <span class="text-accent">Timeline</span></h2>
+        </div>
+
+        <div class="horizon-timeline">
+          <div class="timeline-item gsap-timeline-card">
+            <div class="timeline-content">
+              <span class="time-marker">Now — 2028</span>
+              <h3>The Bio-Foundry OS</h3>
+              <p>
+                Democratizing advanced genetic engineering by providing
+                reliable, automated synthesis and standardized molecular
+                components for global healthcare research.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item gsap-timeline-card">
+            <div class="timeline-content">
+              <span class="time-marker">2030 — 2035</span>
+              <h3>The Precision Epidemic</h3>
+              <p>
+                Utilizing high-throughput sequencing and AI Protein Sculpting to
+                develop targeted oncological treatments at the cellular level,
+                eliminating hereditary diseases before symptoms manifest.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item gsap-timeline-card">
+            <div class="timeline-content">
+              <span class="time-marker">2040 — 2050</span>
+              <h3>Planetary Bio-Equilibrium</h3>
+              <p>
+                A post-disease era where localized, distributed micro-foundries
+                empower communities to grow their own medicines, restore
+                carbon-negative ecosystems, and extended human vitality via
+                programmable biology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-brand gsap-contact">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="./index.html">
+              <img
+                src="./Assets/logo.webp"
+                alt="Bio Tech - Logo"
+                style="max-width: 180px"
+              />
+            </a>
+          </div>
+
+          <p>
+            Discover the latest innovations in biotechnology, genetic research,
+            and healthcare science. Explore breakthroughs shaping the future of
+            medicine and life sciences.
+          </p>
+        </div>
+
+        <div class="footer-links gsap-contact">
+          <h4>Quick Links</h4>
+
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">Contact Us</a>
+          <a href="./login.html">Login</a>
+        </div>
+        <!-- <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+        </div> -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>
+            Stay updated with biotech discoveries, medical research, and
+            emerging innovations in life sciences and healthcare.
+          </p>
+          <form action="./error.html">
+            <div class="news-input">
+              <input type="email" placeholder="Email Address" required />
+              <button type="submit">→</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Innovations. All Rights Reserved.</p>
+        <div class="legal-links">
+          <a href="./error.html">Privacy Policy</a>
+          <a href="./error.html">ISO Compliance</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: "ease-out-cubic",
+    startEvent: "aos:ready", // manual trigger
+  });
+</script>
+
+<!-- hero  -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Core Setup
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 2. Master Arrival Timeline
+    const foundryTl = gsap.timeline({
+      defaults: {
+        ease: "power4.out", // Smoother "arrival" feel for tech sites
+        duration: 1.2,
+        force3D: true,
+      },
+    });
+
+    // 3. Execution Sequence
+
+    // Step A: Immediate visibility toggle to prevent hidden elements from blocking interaction
+    foundryTl.set(".gsap-hero-backdrop, .gsap-hero-left, .gsap-hero-right", {
+      autoAlpha: 1, // GSAP's optimized way to handle opacity + visibility:visible
+    });
+
+    // Step B: Background Entrance (Subtle Zoom + Fade)
+    foundryTl.fromTo(
+      ".gsap-hero-backdrop",
+      { scale: 1.1, opacity: 1 },
+      { scale: 1, opacity: 1, duration: 2, ease: "power2.inOut" },
+    );
+
+    // Step C: Left Content Arrival (Corrected Opacity Fade-In)
+    foundryTl.fromTo(
+      ".gsap-hero-left",
+      { opacity: 1, y: 60 },
+      { opacity: 1, y: 0 },
+      "-=1.5", // Heavy overlap with background
+    );
+
+    // Step D: Right Card Arrival (Slide from side)
+    foundryTl.fromTo(
+      ".gsap-hero-right",
+      { opacity: 1, x: 100 },
+      { opacity: 1, x: 0 },
+      "-=1.2",
+    );
+
+    // 4. Detailed UX Functions (Data Feed Simulation)
+    // Runs when the diagnostic card is physically scrolled into view
+    gsap.from(".gsap-bar-fill", {
+      scrollTrigger: {
+        trigger: ".diagnostic-card",
+        start: "top 85%",
+        once: true,
+      },
+      width: 0,
+      duration: 2,
+      stagger: 0.15,
+      ease: "expo.out",
+      clearProps: "all", // Ensures responsive widths work after animation
+    });
+
+    // 5. Ambient Motion (Floating Effect)
+    // Separate from the main arrival so it doesn't wait for the timeline to finish
+    gsap.to(".diagnostic-card", {
+      y: -15,
+      duration: 3.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      delay: 2, // Start after arrival animation completes
+    });
+  });
+</script>
+
+<!-- 2,3 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Mission & Vision Staggered Arrival
+    gsap.fromTo(
+      ".gsap-reveal-up",
+      {
+        opacity: 0,
+        y: 60,
+        visibility: "hidden",
+      },
+      {
+        scrollTrigger: {
+          trigger: ".purpose-grid",
+          start: "top 80%",
+          once: true,
+        },
+        opacity: 1,
+        y: 0,
+        visibility: "visible",
+        duration: 1.2,
+        stagger: 0.3,
+        ease: "power4.out",
+      },
+    );
+
+    // 2. Research Cards Sequential Fade-In
+    gsap.fromTo(
+      ".gsap-research-card",
+      {
+        opacity: 0,
+        y: 50,
+        visibility: "hidden",
+      },
+      {
+        scrollTrigger: {
+          trigger: ".research-grid",
+          start: "top 85%",
+          once: true,
+        },
+        opacity: 1,
+        y: 0,
+        visibility: "visible",
+        duration: 1.5,
+        stagger: 0.2,
+        ease: "expo.out",
+      },
+    );
+  });
+</script>
+
+<!-- 4,5 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Innovation Section Arrival
+    const innovTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".innovation-tech-hub",
+        start: "top 75%",
+        once: true,
+      },
+    });
+
+    innovTl
+      .fromTo(
+        ".gsap-innov-reveal",
+        { autoAlpha: 0, y: 30 },
+        { autoAlpha: 1, y: 0, duration: 1 },
+      )
+      .fromTo(
+        ".gsap-innov-card",
+        { autoAlpha: 0, scale: 0.95, y: 30 },
+        {
+          autoAlpha: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "back.out(1.2)",
+        },
+        "-=0.5",
+      );
+
+    // 2. Team Section Arrival
+    const teamTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".scientific-team",
+        start: "top 75%",
+        once: true,
+      },
+    });
+
+    teamTl
+      .fromTo(
+        ".gsap-team-reveal",
+        { autoAlpha: 0, x: -50 },
+        { autoAlpha: 1, x: 0, duration: 1.2 },
+      )
+      .fromTo(
+        ".gsap-team-card",
+        { autoAlpha: 0, y: 50 },
+        { autoAlpha: 1, y: 0, duration: 1, stagger: 0.15, ease: "power4.out" },
+        "-=0.8",
+      );
+
+    // 3. UX Utility: Hover Glitch Effect (Optional)
+    // Makes the blueprint numbers flicker slightly on hover
+    document.querySelectorAll(".blueprint-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card.querySelector(".blueprint-number"), {
+          opacity: 0.8,
+          x: 5,
+          duration: 0.1,
+          repeat: 3,
+          yoyo: true,
+        });
+      });
+    });
+  });
+</script>
+
+<!-- 6,7 -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Global Collaboration Arrival
+    const networkTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".global-network-hub",
+            start: "top 75%",
+            once: true // Arrives once and stays stable
+        }
+    });
+
+    networkTl.fromTo(".gsap-network-reveal", 
+        { autoAlpha: 0, y: 30 }, 
+        { autoAlpha: 1, y: 0, duration: 1.2 }
+    )
+    .fromTo(".gsap-network-card", 
+        { autoAlpha: 0, x: 50 }, 
+        { autoAlpha: 1, x: 0, duration: 1, ease: "power3.out" },
+        "-=0.9" // Overlay with text arrival
+    );
+
+    // 2. Biotech Horizon Timeline Arrival
+    const futureTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".biotech-horizon",
+            start: "top 75%",
+            once: true
+        }
+    });
+
+    futureTl.fromTo(".gsap-future-reveal", 
+        { autoAlpha: 0, y: 30 }, 
+        { autoAlpha: 1, y: 0, duration: 1 }
+    )
+    .fromTo(".gsap-timeline-card", 
+        { autoAlpha: 0, y: 30, scale: 0.95 }, 
+        { autoAlpha: 1, y: 0, scale: 1, duration: 1.2, stagger: 0.25, ease: "back.out(1.4)" },
+        "-=0.8" // Heavy overlap for fluid sequencing
+    );
+
+    // 3. UX Functionality: Interactive Map Sourcing (Optional)
+    // Logs the interaction for UX analysis when the map image is hovered
+    document.querySelector('.network-visual').addEventListener('mouseenter', () => {
+        // Source trace logic would go here
+    });
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

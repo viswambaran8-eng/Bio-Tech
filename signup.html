@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio Tech</title>
+    <link rel="icon" href="./Assets/icon.webp" />
+    <link rel="stylesheet" href="./signup.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header1">
+        <div class="container1">
+          <h3>Welcome to Stackly – Where Creators Connect</h3>
+        </div>
+        <div class="container2">
+          <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>(123)456-7890</p>
+          </div>
+          <div>
+            <i class="fa-regular fa-envelope"></i>
+            <p>Support@stackly.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="header2">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="div">
+          <nav>
+            <ul>
+              <li class="dropdown">
+                <a href="./index.html">Home</a>
+
+                <!-- <span class="drop-toggle">
+                  <i class="fa-solid fa-caret-down"></i>
+                </span> -->
+
+                <ul class="dropdown-menu">
+                  <li><a href="./index2.html">Home 2</a></li>
+                </ul>
+              </li>
+
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./service.html">Services</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <!-- <li><a href="./dashboard.html">Dashboard</a></li> -->
+            </ul>
+          </nav>
+
+          <div class="icons">
+            <div class="login">
+              <a href="./login.html">
+                <button class="log-btn">Login</button>
+              </a>
+            </div>
+
+            <div class="mobilebar">
+              <div class="hamburger-box">
+                <div class="hamburger">
+                  <div class="line line1"></div>
+                  <div class="line line2"></div>
+                  <div class="line line3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li class="has-dropdown menu-item">
+          <div class="dropdown-header">
+            <a href="./index.html">Home</a>
+            <!-- <span class="drop-caret" id="home-caret">▾</span> -->
+          </div>
+          <!-- <ul class="submenu" id="home-dropdown">
+            <li><a href="./index2.html">Home 2</a></li>
+          </ul> -->
+        </li>
+
+        <li class="menu-item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="./service.html">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li class="menu-item">
+          <a href="./contact.html">Contact Us</a>
+        </li>
+        <!-- <li class="menu-item">
+          <a href="./dashboard.html">Dashboard</a>
+        </li> -->
+        <li class="menu-item">
+          <a href="./login.html">Login</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-login">
+        <!-- <a href="./app.html">
+            <button class="login-btn">Buy Now</button>
+          </a> -->
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <section class="Structure">
+  <div class="signout-wrapper">
+    <div class="signout-card">
+
+      <!-- LEFT SIDE -->
+      <div class="signout-left">
+        <h1>Create your account on <span>Stackly Video Hub</span></h1>
+
+        <ul>
+          <li>✔ Upload and share videos with a global audience</li>
+          <li>✔ Discover trending videos and viral content</li>
+          <li>✔ Build your own creator channel</li>
+          <li>✔ Access powerful video management tools</li>
+          <li>✔ Join the next generation of digital creators</li>
+        </ul>
+
+        <div class="tip">
+          Tip: Complete the form to start your creator journey.
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="signout-right">
+        <h2>Create Account</h2>
+        <p class="headings">
+          Join Stackly Video Hub and start uploading your content.
+        </p>
+
+        <form id="signupForm">
+
+          <!-- FULL NAME -->
+          <div class="input-group">
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Full Name"
+              required
+            />
+          </div>
+
+          <!-- ROLE -->
+          <div class="input-group">
+            <select id="role" required>
+              <option value="">Select Role</option>
+              <option value="administrator">Administrator</option>
+              <!-- <option value="editor">Editor</option> -->
+              <option value="user">User</option>
+            </select>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="you@gmail.com"
+              required
+            />
+          </div>
+
+          <!-- CHANNEL / ORGANIZATION -->
+          <div class="input-group">
+            <input
+              type="text"
+              id="channel"
+              placeholder="Channel Name / Organization"
+              required
+            />
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="input-group password-group">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <span id="togglePassword">Show</span>
+          </div>
+
+          <!-- CONFIRM PASSWORD -->
+          <div class="input-group password-group">
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+              required
+            />
+            <span id="toggleConfirmPassword">Show</span>
+          </div>
+
+          <!-- TERMS -->
+          <!-- <div class="input-group checkbox-group"> -->
+            <label style="font-size:14px;text-align: center; width: 100%; display: flex;gap: 10px;justify-content: center;align-items: center;" >
+              <input type="checkbox" id="terms" required />
+              I agree to the Terms of Service and Privacy Policy.
+            </label>
+          <!-- </div> -->
+
+          <!-- BUTTON -->
+          <button type="submit" class="signout-btn">
+            Create Account
+          </button>
+
+          <div class="link">
+            <p class="links">
+              Already have an account?     
+              <a href="./login.html">Sign-In</a>
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+
+const signupForm = document.getElementById("signupForm");
+
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirmPassword");
+
+const togglePassword = document.getElementById("togglePassword");
+const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
+
+/* SHOW / HIDE PASSWORD */
+
+togglePassword.addEventListener("click", () => {
+
+  const type = password.type === "password" ? "text" : "password";
+  password.type = type;
+
+  togglePassword.textContent = type === "password" ? "Show" : "Hide";
+});
+
+toggleConfirmPassword.addEventListener("click", () => {
+
+  const type = confirmPassword.type === "password" ? "text" : "password";
+  confirmPassword.type = type;
+
+  toggleConfirmPassword.textContent = type === "password" ? "Show" : "Hide";
+});
+
+/* SIGNUP VALIDATION */
+
+signupForm.addEventListener("submit", function (e) {
+
+  e.preventDefault();
+
+  const fullname = document.getElementById("fullname").value.trim();
+  const role = document.getElementById("role").value;
+  const email = document.getElementById("email").value.trim();
+  const channel = document.getElementById("channel").value.trim();
+  const pass = password.value.trim();
+  const confirmPass = confirmPassword.value.trim();
+  const terms = document.getElementById("terms").checked;
+
+  const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+  const passwordPattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
+
+  if (fullname.length < 3) {
+    alert("Full name must be at least 3 characters");
+    return;
+  }
+
+  if (!role) {
+    alert("Please select your role");
+    return;
+  }
+
+  if (!gmailPattern.test(email)) {
+    alert("Email must end with @gmail.com");
+    return;
+  }
+
+  if (channel.length < 3) {
+    alert("Enter valid channel / organization name");
+    return;
+  }
+
+  if (!passwordPattern.test(pass)) {
+    alert(
+      "Password must contain:\n- Uppercase letter\n- Lowercase letter\n- Number\n- Special symbol\n- Minimum 6 characters"
+    );
+    return;
+  }
+
+  if (pass !== confirmPass) {
+    alert("Passwords do not match");
+    return;
+  }
+
+  if (!terms) {
+    alert("You must agree to Terms and Privacy Policy");
+    return;
+  }
+
+  alert("Account created successfully!");
+
+  window.location.href = "login.html";
+
+});
+</script>
+
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-brand gsap-contact">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="./index.html">
+              <img
+                src="./Assets/logo.webp"
+                alt="Bio Tech - Logo"
+                style="max-width: 180px"
+              />
+            </a>
+          </div>
+
+          <p>
+            Discover the latest innovations in biotechnology, genetic research,
+            and healthcare science. Explore breakthroughs shaping the future of
+            medicine and life sciences.
+          </p>
+        </div>
+
+        <div class="footer-links gsap-contact">
+          <h4>Quick Links</h4>
+
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">Contact Us</a>
+          <a href="./login.html">Login</a>
+        </div>
+        <!-- <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+        </div> -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>
+            Stay updated with biotech discoveries, medical research, and
+            emerging innovations in life sciences and healthcare.
+          </p>
+          <form action="./error.html">
+            <div class="news-input">
+              <input type="email" placeholder="Email Address" required />
+              <button type="submit">→</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Innovations. All Rights Reserved.</p>
+        <div class="legal-links">
+          <a href="./error.html">Privacy Policy</a>
+          <a href="./error.html">ISO Compliance</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: "ease-out-cubic",
+    startEvent: "aos:ready", // manual trigger
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

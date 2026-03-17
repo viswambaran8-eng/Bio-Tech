@@ -1,0 +1,1665 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio Tech</title>
+    <link rel="icon" href="./Assets/icon.webp" />
+    <link rel="stylesheet" href="./index.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header1">
+        <div class="container1">
+          <h3>Welcome to Stackly – Where Creators Connect</h3>
+        </div>
+        <div class="container2">
+          <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>(123)456-7890</p>
+          </div>
+          <div>
+            <i class="fa-regular fa-envelope"></i>
+            <p>Support@stackly.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="header2">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="div">
+          <nav>
+            <ul>
+              <li class="dropdown">
+                <a href="./index.html">Home</a>
+
+                <!-- <span class="drop-toggle">
+                  <i class="fa-solid fa-caret-down"></i>
+                </span> -->
+
+                <ul class="dropdown-menu">
+                  <li><a href="./index2.html">Home 2</a></li>
+                </ul>
+              </li>
+
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./service.html">Services</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <!-- <li><a href="./dashboard.html">Dashboard</a></li> -->
+            </ul>
+          </nav>
+
+          <div class="icons">
+            <div class="login">
+              <a href="./login.html">
+                <button class="log-btn">Login</button>
+              </a>
+            </div>
+
+            <div class="mobilebar">
+              <div class="hamburger-box">
+                <div class="hamburger">
+                  <div class="line line1"></div>
+                  <div class="line line2"></div>
+                  <div class="line line3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li class="has-dropdown menu-item">
+          <div class="dropdown-header">
+            <a href="./index.html">Home</a>
+            <!-- <span class="drop-caret" id="home-caret">▾</span> -->
+          </div>
+          <!-- <ul class="submenu" id="home-dropdown">
+            <li><a href="./index2.html">Home 2</a></li>
+          </ul> -->
+        </li>
+
+        <li class="menu-item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="./service.html">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li class="menu-item">
+          <a href="./contact.html">Contact Us</a>
+        </li>
+        <!-- <li class="menu-item">
+          <a href="./dashboard.html">Dashboard</a>
+        </li> -->
+        <li class="menu-item">
+          <a href="./login.html">Login</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-login">
+        <!-- <a href="./app.html">
+            <button class="login-btn">Buy Now</button>
+          </a> -->
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="biotech-hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="content-wrapper">
+            <span class="tagline">Pioneering Life Sciences</span>
+            <h1 class="gsap-reveal">
+              Shaping the Future with <span>Biotechnology</span>
+            </h1>
+            <p class="gsap-reveal">
+              Our laboratory is at the forefront of the biological revolution.
+              By merging
+              <strong>genetic engineering</strong> with computational modeling,
+              we develop sustainable solutions for global health and
+              environmental stability.
+            </p>
+
+            <div class="hero-btns gsap-reveal">
+              <a href="./error.html">
+                <button class="btn-main">Explore Research</button>
+              </a>
+              <a href="./error.html">
+                <button class="btn-alt">Learn More</button>
+              </a>
+            </div>
+
+            <div class="hero-features gsap-reveal">
+              <div class="feat">
+                <div class="feat-icon">🧬</div>
+                <div>
+                  <h4>Gene Editing</h4>
+                  <p>Precision CRISPR-Cas9 workflows.</p>
+                </div>
+              </div>
+              <div class="feat">
+                <div class="feat-icon">🔬</div>
+                <div>
+                  <h4>Bio-Analysis</h4>
+                  <p>Advanced molecular diagnostics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="image-grid">
+            <div class="img-box main-img gsap-img">
+              <img
+                src="./Assets/Futuristic biotech laboratory_11zon.webp"
+                alt="Futuristic biotech laboratory"
+              />
+              <div class="img-label">Central Research Hub</div>
+            </div>
+            <div class="img-box sub-img gsap-img">
+              <img
+                src="./Assets/Scientist working in lab_11zon.webp"
+                alt="Scientist working in lab"
+              />
+            </div>
+            <canvas id="helixCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="biotech-section" id="about">
+      <div class="container">
+        <div class="section-header gsap-overview-header">
+          <span class="section-tag">02 / Platform Overview</span>
+          <h2 class="section-title">
+            Innovating at the <span class="text-blue">Molecular Level</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="image-wrapper gsap-frame">
+              <img
+                src="./Assets/Biotech Research_11zon.webp"
+                alt="Biotech Research"
+              />
+              <div class="scanner-bar"></div>
+
+              <div class="floating-data gsap-card">
+                <div class="data-icon">🧬</div>
+                <div class="data-text">
+                  <strong>Live Sequencing</strong>
+                  <span>99.9% Precision</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <p class="lead-text gsap-reveal">
+              Our platform explores the evolving world of biotechnology,
+              highlighting innovations in genetic science, bioengineering, and
+              sustainable solutions designed to improve life on Earth.
+            </p>
+
+            <div class="feature-stack">
+              <div class="feature-box gsap-reveal">
+                <div class="feature-num">01</div>
+                <div class="feature-info">
+                  <h4>Genetic Synthesis</h4>
+                  <p>
+                    Utilizing high-throughput sequencing to map complex genomic
+                    structures for targeted therapeutic interventions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-box gsap-reveal">
+                <div class="feature-num">02</div>
+                <div class="feature-info">
+                  <h4>Environmental Bio-Tech</h4>
+                  <p>
+                    Engineering microbial life to process carbon emissions and
+                    create biodegradable polymer alternatives.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-box gsap-reveal">
+                <div class="feature-num">03</div>
+                <div class="feature-info">
+                  <h4>Neural Interface Labs</h4>
+                  <p>
+                    Integrating biological systems with computational frameworks
+                    for advanced bio-feedback diagnostics.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-actions gsap-reveal">
+              <button class="btn-main">View Our Mission</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="biotech-fields" id="sectors">
+      <div class="container">
+        <div class="section-header gsap-sectors-header">
+          <span class="section-tag">03 / Industry Sectors</span>
+          <h2 class="section-title">
+            Diverse Fields of <span class="text-blue">Impact</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="fields-grid">
+          <div class="field-card gsap-field" data-tilt>
+            <div class="card-bg">
+              <img
+                src="./Assets/Genetic Engineering_11zon.webp"
+                alt="Genetic Engineering"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-top">
+                <span class="card-number">01</span>
+                <div class="card-icon">🧬</div>
+              </div>
+              <h3>Genetic Engineering</h3>
+              <p>
+                Advanced manipulation of organismal DNA using CRISPR-Cas9 and
+                Zinc Finger Nucleases to develop therapeutic proteins,
+                gene-silencing techniques, and precision medicine for hereditary
+                disorders.
+              </p>
+              <div class="card-tags">
+                <span>CRISPR</span> <span>Gene Therapy</span>
+              </div>
+              <a href="./error.html" class="card-link">Detailed Analysis →</a>
+            </div>
+          </div>
+
+          <div class="field-card gsap-field" data-tilt>
+            <div class="card-bg">
+              <img
+                src="./Assets/Agricultural Biotech_11zon.webp"
+                alt="Agricultural Biotech"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-top">
+                <span class="card-number">02</span>
+                <div class="card-icon">🌱</div>
+              </div>
+              <h3>Agricultural Biotechnology</h3>
+              <p>
+                Enhancing crop resilience against abiotic stressors and pests
+                through molecular breeding. We focus on bio-fortification to
+                increase nutritional density and decrease reliance on chemical
+                pesticides.
+              </p>
+              <div class="card-tags">
+                <span>Bio-Resilience</span> <span>Crop Yield</span>
+              </div>
+              <a href="./error.html" class="card-link">Detailed Analysis →</a>
+            </div>
+          </div>
+
+          <div class="field-card gsap-field" data-tilt>
+            <div class="card-bg">
+              <img
+                src="./Assets/Environmental Biotech_11zon_11zon.webp"
+                alt="Environmental Biotech"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-top">
+                <span class="card-number">03</span>
+                <div class="card-icon">🌍</div>
+              </div>
+              <h3>Environmental Biotechnology</h3>
+              <p>
+                Utilizing specialized microbes for bioremediation of oil spills
+                and heavy metal contamination. Our focus is on harnessing
+                biological catalysts to create sustainable waste-to-energy
+                conversion systems.
+              </p>
+              <div class="card-tags">
+                <span>Bioremediation</span> <span>Sustainability</span>
+              </div>
+              <a href="./error.html" class="card-link">Detailed Analysis →</a>
+            </div>
+          </div>
+
+          <div class="field-card gsap-field" data-tilt>
+            <div class="card-bg">
+              <img
+                src="./Assets/Industrial Biotech_11zon.webp"
+                alt="Industrial Biotech"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-top">
+                <span class="card-number">04</span>
+                <div class="card-icon">⚙️</div>
+              </div>
+              <h3>Industrial Biotechnology</h3>
+              <p>
+                Known as "White Biotech," we optimize fermentation processes and
+                enzymatic biocatalysis to produce bio-based chemicals, plastics,
+                and textiles with a significantly lower carbon footprint.
+              </p>
+              <div class="card-tags">
+                <span>Bio-Manufacturing</span> <span>Enzymes</span>
+              </div>
+              <a href="./error.html" class="card-link">Detailed Analysis →</a>
+            </div>
+          </div>
+
+          <div class="field-card gsap-field" data-tilt>
+            <div class="card-bg">
+              <img
+                src="./Assets/Synthetic Biology_11zon.webp"
+                alt="Synthetic Biology"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-top">
+                <span class="card-number">05</span>
+                <div class="card-icon">🧪</div>
+              </div>
+              <h3>Synthetic Biology</h3>
+              <p>
+                Applying engineering principles to biology. We redesign
+                biological parts—such as genetic circuits and metabolic
+                pathways—to create "cell factories" capable of producing rare
+                compounds.
+              </p>
+              <div class="card-tags">
+                <span>Bio-Circuitry</span> <span>Cell Factories</span>
+              </div>
+              <a href="./error.html" class="card-link">Detailed Analysis →</a>
+            </div>
+          </div>
+
+          <div class="field-card gsap-field" data-tilt>
+            <div class="card-bg">
+              <img
+                src="./Assets/Bioinformatics_11zon_11zon.webp"
+                alt="Bioinformatics"
+              />
+            </div>
+            <div class="card-content">
+              <div class="card-top">
+                <span class="card-number">06</span>
+                <div class="card-icon">💻</div>
+              </div>
+              <h3>Bioinformatics</h3>
+              <p>
+                The intersection of biology and Big Data. We use machine
+                learning algorithms to sequence genomes, model protein folding
+                (Proteomics), and analyze high-throughput biological data.
+              </p>
+              <div class="card-tags">
+                <span>Big Data</span> <span>Proteomics</span>
+              </div>
+              <a href="./error.html" class="card-link">Detailed Analysis →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="biotech-discoveries" id="discoveries">
+      <div class="container">
+        <div class="section-header gsap-discoveries-header">
+          <span class="section-tag">04 / Global Breakthroughs</span>
+          <h2 class="section-title">
+            Latest Research & <span class="text-blue">Discoveries</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="discovery-feed">
+          <div class="feed-track gsap-feed-stagger">
+            <article class="discovery-card gsap-feed-card">
+              <div class="card-visual">
+                <img
+                  src="./Assets/CRISPR Gene Editing_11zon.webp"
+                  alt="CRISPR Gene Editing"
+                />
+                <div class="live-pulse"></div>
+              </div>
+              <div class="card-content">
+                <span class="discovery-date">March 2026</span>
+                <h3>CRISPR-Cas12: Next-Gen Diagnostics</h3>
+                <p>
+                  Researchers have optimized Cas12 enzymes to detect viral
+                  pathogens in under 15 minutes, with sensitivities matching
+                  traditional RT-PCR tests. This platform offers rapid,
+                  field-deployable diagnostics for emerging infectious diseases.
+                </p>
+                <div class="card-meta">
+                  <span>Field: Genomics</span>
+                  <a href="./error.html" class="read-more">View Study →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="discovery-card gsap-feed-card">
+              <div class="card-visual">
+                <img
+                  src="./Assets/Synthetic Organoids_11zon_11zon.webp"
+                  alt="Synthetic Organoids"
+                />
+                <div class="live-pulse"></div>
+              </div>
+              <div class="card-content">
+                <span class="discovery-date">February 2026</span>
+                <h3>Lab-Grown Vascularized Organoids</h3>
+                <p>
+                  A breakthrough in tissue engineering: functional human liver
+                  organoids with integrated micro-vasculature have been
+                  successfully synthesized. This advances drug toxicity testing
+                  and moves closer to viable transplantable tissues.
+                </p>
+                <div class="card-meta">
+                  <span>Field: Bioengineering</span>
+                  <a href="./error.html" class="read-more">View Study →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="discovery-card gsap-feed-card">
+              <div class="card-visual">
+                <img
+                  src="./Assets/AI Protein Prediction_11zon.webp"
+                  alt="AI Protein Prediction"
+                />
+                <div class="live-pulse"></div>
+              </div>
+              <div class="card-content">
+                <span class="discovery-date">January 2026</span>
+                <h3>AI-Driven Protein Function Prediction</h3>
+                <p>
+                  New computational models integrating deep learning can now
+                  predict the function of uncharacterized proteins with 95%
+                  accuracy. This accelerates functional genomics and identifies
+                  novel drug targets from massive genomic datasets.
+                </p>
+                <div class="card-meta">
+                  <span>Field: Bioinformatics</span>
+                  <a href="./error.html" class="read-more">View Study →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="discovery-card gsap-feed-card">
+              <div class="card-visual">
+                <img
+                  src="./Assets/Microbial Carbon Capture_11zon_11zon.webp"
+                  alt="Microbial Carbon Capture"
+                />
+                <div class="live-pulse"></div>
+              </div>
+              <div class="card-content">
+                <span class="discovery-date">December 2025</span>
+                <h3>Microbial Systems for Carbon Capture</h3>
+                <p>
+                  Engineered cyanobacteria strains have demonstrated a 4x
+                  increase in carbon dioxide fixation efficiency. This scalable
+                  biological system opens new pathways for industrial carbon
+                  capture and sustainable biofuel production.
+                </p>
+                <div class="card-meta">
+                  <span>Field: Environ-Biotech</span>
+                  <a href="./error.html" class="read-more">View Study →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="innovation-process" id="process">
+      <div class="container">
+        <div class="section-header gsap-workflow-header">
+          <span class="section-tag">05 / R&D Roadmap</span>
+          <h2 class="section-title">
+            Our Innovation <span class="text-blue">Workflow</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="process-wrapper">
+          <div class="progress-line">
+            <div class="progress-bar-fill"></div>
+          </div>
+
+          <div class="steps-grid">
+            <div class="process-step gsap-step">
+              <div class="step-marker">01</div>
+              <div class="step-visual">
+                <img
+                  src="./Assets/Scientific Research_11zon.webp"
+                  alt="Scientific Research"
+                />
+              </div>
+              <div class="step-content">
+                <h3>Scientific Research</h3>
+                <p>
+                  We begin with deep genomic exploration and literature
+                  synthesis. Using high-throughput screening, our scientists
+                  identify unique biological markers and molecular targets that
+                  form the foundation of new therapeutic hypotheses.
+                </p>
+                <ul class="step-tags">
+                  <li>Data Synthesis</li>
+                  <li>Target ID</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="process-step gsap-step">
+              <div class="step-marker">02</div>
+              <div class="step-visual">
+                <img
+                  src="./Assets/Laboratory Testing_11zon.webp"
+                  alt="Laboratory Testing"
+                />
+              </div>
+              <div class="step-content">
+                <h3>Laboratory Testing</h3>
+                <p>
+                  Hypotheses are moved to our wet labs for rigorous In-Vitro
+                  validation. We utilize automated liquid handling and real-time
+                  monitoring to observe cellular responses to engineered
+                  catalysts under controlled environmental conditions.
+                </p>
+                <ul class="step-tags">
+                  <li>In-Vitro Validation</li>
+                  <li>Assay Dev</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="process-step gsap-step">
+              <div class="step-marker">03</div>
+              <div class="step-visual">
+                <img
+                  src="./Assets/Bioengineering_11zon.webp"
+                  alt="Bioengineering"
+                />
+              </div>
+              <div class="step-content">
+                <h3>Bioengineering Development</h3>
+                <p>
+                  Once validated, we apply synthetic biology principles to
+                  "build" the solution. This involves assembling genetic
+                  circuits and optimizing metabolic pathways to ensure the
+                  biological system performs reliably at scale.
+                </p>
+                <ul class="step-tags">
+                  <li>Gene Assembly</li>
+                  <li>Pathway Opt</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="process-step gsap-step">
+              <div class="step-marker">04</div>
+              <div class="step-visual">
+                <img
+                  src="./Assets/Real-world Applications_11zon.webp"
+                  alt="Real-world Applications"
+                />
+              </div>
+              <div class="step-content">
+                <h3>Real-world Applications</h3>
+                <p>
+                  The final phase transitions tech from lab to life. We focus on
+                  pilot-scale manufacturing and clinical trials, ensuring our
+                  bio-engineered solutions meet global safety standards and
+                  environmental sustainability goals.
+                </p>
+                <ul class="step-tags">
+                  <li>Pilot Scaling</li>
+                  <li>Global Impact</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="biotech-tools" id="technology">
+      <div class="container">
+        <div class="section-header gsap-tech-header">
+          <span class="section-tag">06 / Core Technologies</span>
+          <h2 class="section-title">
+            The Tools of <span class="text-blue">Innovation</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="tools-hub">
+          <div class="tech-modules-grid">
+            <div class="tech-module gsap-reveal" data-tech="crispr">
+              <div class="module-icon">🧬</div>
+              <h4>CRISPR Technology</h4>
+              <p>
+                Programmable gene editing utilizing the Cas9 enzyme for precise
+                genomic modifications.
+              </p>
+            </div>
+
+            <div class="tech-module gsap-reveal" data-tech="sequencing">
+              <div class="module-icon">🔍</div>
+              <h4>DNA Sequencing</h4>
+              <p>
+                High-throughput Next-Generation Sequencing (NGS) for rapid
+                whole-genome analysis.
+              </p>
+            </div>
+
+            <div class="tech-module gsap-reveal" data-tech="bioinformatics">
+              <div class="module-icon">💻</div>
+              <h4>Bioinformatics</h4>
+              <p>
+                Computational biology for analyzing and interpreting massive
+                biological datasets.
+              </p>
+            </div>
+
+            <div class="tech-module gsap-reveal" data-tech="engineering">
+              <div class="module-icon">🔬</div>
+              <h4>Molecular Engineering</h4>
+              <p>
+                Designing and constructing novel biomolecules with enhanced
+                functionalities.
+              </p>
+            </div>
+          </div>
+
+          <div class="tech-display gsap-reveal">
+            <div class="display-content active" id="default-content">
+              <img
+                src="./Assets/Biotech Lab_11zon.webp"
+                alt="Biotech Lab"
+              />
+              <h3>Explore Advanced Biotech Tools</h3>
+              <p>
+                Interact with the modules to learn more about the cutting-edge
+                technologies driving biological research and development.
+              </p>
+            </div>
+            <div class="display-content" id="crispr-content">
+              <img
+                src="./Assets/CRISPR Technology_11zon.webp"
+                alt="CRISPR Technology"
+              />
+              <h3>CRISPR Technology: Precision Editing</h3>
+              <p>
+                Clustered Regularly Interspaced Short Palindromic Repeats
+                (CRISPR) is a revolutionary gene-editing tool. We leverage
+                CRISPR-Cas9 to introduce targeted double-strand breaks in DNA,
+                enabling gene knockouts, insertions, or precise sequence
+                corrections. Its applications span from therapeutic development
+                for genetic disorders to engineering resilient crops.
+              </p>
+            </div>
+            <div class="display-content" id="sequencing-content">
+              <img
+                src="./Assets/DNA Sequencing_11zon_11zon.webp"
+                alt="DNA Sequencing"
+              />
+              <h3>DNA Sequencing: Decoding the Genome</h3>
+              <p>
+                Next-Generation Sequencing (NGS) technologies allow us to
+                rapidly read large fragments of DNA. By parallelizing the
+                sequencing process, NGS provides whole-genome coverage
+                efficiently. We use this data to identify disease-causing
+                mutations, track microbial evolution, and personalize medicine.
+                [Image of the detailed workflow of Next-Generation Sequencing]
+              </p>
+            </div>
+            <div class="display-content" id="bioinformatics-content">
+              <img
+                src="./Assets/Bioinformatics_11zon_11zon.webp"
+                alt="Bioinformatics"
+              />
+              <h3>Bioinformatics: The Big Data of Biology</h3>
+              <p>
+                Bioinformatics integrates biology, computer science, and
+                statistics. We employ sophisticated algorithms and machine
+                learning models to analyze sequence data, predict protein
+                structure and function, and model biological networks. This
+                computational approach accelerates target discovery and drug
+                development, transforming raw biological data into actionable
+                insights.
+              </p>
+            </div>
+            <div class="display-content" id="engineering-content">
+              <img
+                src="./Assets/Molecular Engineering_11zon_11zon.webp"
+                alt="Molecular Engineering"
+              />
+              <h3>Molecular Engineering: Designing New Biomolecules</h3>
+              <p>
+                Molecular engineering involves the rational design and synthesis
+                of molecules with specific biological functions. We combine
+                principles from chemistry, physics, and biology to create novel
+                proteins, enzymes, and synthetic genetic circuits. This
+                technology enables the development of biocatalysts for
+                industrial processes, biosensors for diagnostics, and smart drug
+                delivery systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-impact" id="impact">
+      <div class="container">
+        <div class="section-header gsap-impact-header">
+          <span class="section-tag">07 / Global Footprint</span>
+          <h2 class="section-title">
+            Impacting the <span class="text-blue">World</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card gsap-impact-card">
+            <div class="impact-icon">🌱</div>
+            <h3>Sustainable Agriculture</h3>
+            <p>
+              Developing bio-fortified crops and drought-resistant strains to
+              ensure food security for a growing global population while
+              reducing chemical dependency.
+            </p>
+          </div>
+          <div class="impact-card gsap-impact-card">
+            <div class="impact-icon">🌍</div>
+            <h3>Environmental Protection</h3>
+            <p>
+              Utilizing microbial bioremediation to detoxify industrial waste
+              and engineering enzymes that break down micro-plastics in our
+              oceans.
+            </p>
+          </div>
+          <div class="impact-card gsap-impact-card">
+            <div class="impact-icon">🧬</div>
+            <h3>Scientific Advancement</h3>
+            <p>
+              Pushing the boundaries of synthetic biology to decode rare genetic
+              disorders and creating open-source genomic data for global health
+              equity.
+            </p>
+          </div>
+          <div class="impact-card gsap-impact-card">
+            <div class="impact-icon">🏭</div>
+            <h3>Industrial Efficiency</h3>
+            <p>
+              Replacing traditional chemical manufacturing with bio-catalysis,
+              reducing carbon emissions by up to 60% in heavy industrial
+              processes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-team" id="team">
+      <div class="container">
+        <div class="section-header gsap-team-header">
+          <span class="section-tag">08 / Expert Minds</span>
+          <h2 class="section-title">
+            The Faces of <span class="text-blue">Discovery</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card gsap-team-card">
+            <div class="member-image">
+              <img
+                src="./Assets/team2_11zon.webp"
+                alt="Dr. Sarah Chen"
+              />
+            </div>
+            <div class="member-info">
+              <h4>Dr. Sarah Chen</h4>
+              <span class="member-role">Chief Genomicist</span>
+              <p>
+                Lead researcher in CRISPR-Cas12 diagnostics with 15+ years in
+                molecular engineering.
+              </p>
+            </div>
+          </article>
+
+          <article class="team-card gsap-team-card">
+            <div class="member-image">
+              <img
+                src="./Assets/team1_11zon.webp"
+                alt="Dr. Marcus Thorne"
+              />
+            </div>
+            <div class="member-info">
+              <h4>Dr. Marcus Thorne</h4>
+              <span class="member-role">Bioinformatics Lead</span>
+              <p>
+                Specializes in AI-driven protein folding and high-throughput
+                data synthesis.
+              </p>
+            </div>
+          </article>
+
+          <article class="team-card gsap-team-card">
+            <div class="member-image">
+              <img
+                src="./Assets/team3_11zon.webp"
+                alt="Dr. Elena Rossi"
+              />
+            </div>
+            <div class="member-info">
+              <h4>Dr. Elena Rossi</h4>
+              <span class="member-role">Molecular Engineer</span>
+              <p>
+                Focused on synthetic genetic circuits and sustainable
+                bio-catalysis solutions.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio-apps" id="applications">
+      <div class="container">
+        <div class="section-header gsap-apps-header">
+          <span class="section-tag">09 / Practical Solutions</span>
+          <h2 class="section-title">
+            Bridging Science & <span class="text-blue">Utility</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="apps-featured-grid">
+          <div class="app-item gsap-app-item">
+            <div class="app-visual">
+              <img
+                src="./Assets/Sustainable Agriculture_11zon_11zon.webp"
+                alt="Sustainable Agriculture"
+              />
+            </div>
+            <div class="app-info">
+              <div class="app-num">01</div>
+              <h3>Sustainable Agriculture</h3>
+              <p>
+                We are revolutionizing food systems through nitrogen-fixing
+                microbes and CRISPR-edited drought resilience, reducing the
+                global carbon footprint of farming by 30%.
+              </p>
+            </div>
+          </div>
+
+          <div class="app-item gsap-app-item">
+            <div class="app-visual">
+              <img
+                src="./Assets/Bio-manufacturing_11zon.webp"
+                alt="Bio-manufacturing"
+              />
+            </div>
+            <div class="app-info">
+              <div class="app-num">02</div>
+              <h3>Bio-manufacturing</h3>
+              <p>
+                Moving away from petrochemicals, our bioreactors produce
+                high-value chemicals and textiles using engineered yeast
+                strains, ensuring a circular industrial economy.
+              </p>
+            </div>
+          </div>
+
+          <div class="app-item gsap-app-item">
+            <div class="app-visual">
+              <img
+                src="./Assets/Environmental Restoration_11zon_11zon.webp"
+                alt="Environmental Restoration"
+              />
+            </div>
+            <div class="app-info">
+              <div class="app-num">03</div>
+              <h3>Environmental Restoration</h3>
+              <p>
+                Deploying specialized enzyme cocktails that degrade synthetic
+                pollutants in soil and water systems, returning damaged
+                ecosystems to their native state.
+              </p>
+            </div>
+          </div>
+
+          <div class="app-item gsap-app-item">
+            <div class="app-visual">
+              <img
+                src="./Assets/Genetic Research_11zon.webp"
+                alt="Genetic Research"
+              />
+            </div>
+            <div class="app-info">
+              <div class="app-num">04</div>
+              <h3>Genetic Research</h3>
+              <p>
+                Unlocking the secrets of the epigenome to predict disease
+                susceptibility years before symptoms appear, paving the way for
+                hyper-personalized preventative care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="global-progress" id="global">
+      <div class="container">
+        <div class="global-banner gsap-global-wrap">
+          <div class="global-content">
+            <div class="section-header gsap-global-header">
+              <span class="section-tag">10 / The Future Horizon</span>
+              <h2 class="section-title">
+                A Borderless <span class="text-blue">Innovation Pipeline</span>
+              </h2>
+            </div>
+            <p class="gsap-global-text">
+              Biotechnology research continues to expand globally, driving
+              innovations that support sustainability, scientific discovery, and
+              technological advancement. We collaborate with over 45
+              international research institutions to harmonize genomic standards
+              and accelerate the arrival of life-saving medical devices.
+            </p>
+            <div class="global-stats gsap-global-stats">
+              <div class="global-stats gsap-global-stats">
+                <div class="stat-item">
+                  <h4 class="counter" data-target="45" data-suffix="+ ">0</h4>
+                  <span>Global Partners</span>
+                </div>
+                <div class="stat-item">
+                  <h4 class="counter" data-target="12" data-suffix="k+ ">0</h4>
+                  <span>Genomes Sequenced</span>
+                </div>
+                <div class="stat-item">
+                  <h4 class="counter" data-target="89" data-suffix="% ">0</h4>
+                  <span>Waste Reduction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="global-visual gsap-global-img">
+            <img
+              src="./Assets/Global Connectivity_11zon_11zon.webp"
+              alt="Global Connectivity"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio-insights" id="insights">
+      <div class="container">
+        <div class="section-header gsap-insights-header">
+          <span class="section-tag">11 / Research Pulse</span>
+          <h2 class="section-title">
+            Latest Scientific <span class="text-blue">Perspectives</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="insights-grid">
+          <article class="insight-card gsap-insight-card">
+            <div class="card-visual">
+              <img
+                src="./Assets/CRISPR Technology_11zon.webp"
+                alt="CRISPR Technology"
+              />
+              <span class="card-tag">Genomics</span>
+            </div>
+            <div class="card-content">
+              <h3>
+                The Precision Era: Beyond Cas9 with Zinc Fingers and TALENs
+              </h3>
+              <p>
+                Exploring the next generation of gene-editing tools that offer
+                higher specificity and reduced off-target effects for complex
+                therapeutic applications.
+              </p>
+              <a href="./error.html" class="read-more">Read Analysis →</a>
+            </div>
+          </article>
+
+          <article class="insight-card gsap-insight-card">
+            <div class="card-visual">
+              <img
+                src="./Assets/Genetic Research_11zon.webp"
+                alt="Genetic Research"
+              />
+              <span class="card-tag">Synthetic Bio</span>
+            </div>
+            <div class="card-content">
+              <h3>
+                Programmable Cells: Designing Logic Gates with DNA Circuits
+              </h3>
+              <p>
+                How researchers are applying computational logic to cellular
+                biology, enabling cells to sense environmental signals and
+                respond with predictable behaviors.
+              </p>
+              <a href="./error.html" class="read-more">Read Analysis →</a>
+            </div>
+          </article>
+
+          <article class="insight-card gsap-insight-card">
+            <div class="card-visual">
+              <img
+                src="./Assets/Bioinformatics_11zon_11zon.webp"
+                alt="Bioinformatics"
+              />
+              <span class="card-tag">Data Science</span>
+            </div>
+            <div class="card-content">
+              <h3>
+                AlphaFold and the Protein Folding Problem: A New Era for Drug
+                Discovery
+              </h3>
+              <p>
+                Analyzing the impact of AI-driven protein structure prediction
+                on accelerating the identification of novel drug targets and
+                therapeutic molecules.
+              </p>
+              <a href="./error.html" class="read-more">Read Analysis →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-brand gsap-contact">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="./index.html">
+              <img
+                src="./Assets/logo.webp"
+                alt="Bio Tech - Logo"
+                style="max-width: 180px"
+              />
+            </a>
+          </div>
+
+          <p>
+            Discover the latest innovations in biotechnology, genetic research,
+            and healthcare science. Explore breakthroughs shaping the future of
+            medicine and life sciences.
+          </p>
+        </div>
+
+        <div class="footer-links gsap-contact">
+          <h4>Quick Links</h4>
+
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">Contact Us</a>
+          <a href="./login.html">Login</a>
+        </div>
+        <!-- <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="./about.html">About</a>
+          <a href="./service.html">Services</a>
+          <a href="./blog.html">Blog</a>
+        </div> -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>
+            Stay updated with biotech discoveries, medical research, and
+            emerging innovations in life sciences and healthcare.
+          </p>
+          <form action="./error.html">
+            <div class="news-input">
+              <input type="email" placeholder="Email Address" required />
+              <button type="submit">→</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Innovations. All Rights Reserved.</p>
+        <div class="legal-links">
+          <a href="./error.html">Privacy Policy</a>
+          <a href="./error.html">ISO Compliance</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: "ease-out-cubic",
+    startEvent: "aos:ready", // manual trigger
+  });
+</script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- hero -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // GSAP Reveal Animations
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+    tl.from(".gsap-reveal", {
+      y: 30,
+      opacity: 1,
+      duration: 1.2,
+      stagger: 0.2,
+      once: true, // Animate only once on first view
+    }).from(
+      ".gsap-img",
+      {
+        scale: 0.9,
+        opacity: 1,
+        duration: 1.5,
+        stagger: 0.3,
+        once: true, // Animate only once on first view
+      },
+      "-=1",
+    );
+
+    // DNA Helix Animation Logic
+    const canvas = document.getElementById("helixCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = 400;
+    canvas.height = 600;
+
+    function drawHelix() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const time = Date.now() * 0.001;
+
+      for (let i = 0; i < 25; i++) {
+        const y = i * 25;
+        const x1 = 200 + Math.sin(time + i * 0.2) * 80;
+        const x2 = 200 + Math.sin(time + i * 0.2 + Math.PI) * 80;
+
+        // Connectors
+        ctx.beginPath();
+        ctx.moveTo(x1, y);
+        ctx.lineTo(x2, y);
+        ctx.strokeStyle = "rgba(32, 146, 192, 0.2)";
+        ctx.stroke();
+
+        // Nucleotides
+        ctx.fillStyle = "rgb(32, 146, 192)";
+        ctx.beginPath();
+        ctx.arc(x1, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "./error.htmlffffff";
+        ctx.beginPath();
+        ctx.arc(x2, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      requestAnimationFrame(drawHelix);
+    }
+    drawHelix();
+  });
+</script>
+
+<!-- about -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Scroll reveal for general items
+    gsap.utils.toArray(".gsap-reveal").forEach((item) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 85%",
+        },
+        y: 20,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        once: true, // Animate only once on first view
+      });
+    });
+
+    // Zoom effect for image frame
+    gsap.from(".gsap-frame", {
+      scrollTrigger: {
+        trigger: ".about-visual",
+        start: "top 75%",
+      },
+      //   scale: 0.8,
+      opacity: 1,
+      duration: 1.5,
+      ease: "expo.out",
+      once: true, // Animate only once on first view
+    });
+
+    // Staggered entry for feature boxes
+    gsap.from(".feature-box", {
+      scrollTrigger: {
+        trigger: ".feature-stack",
+        start: "top 80%",
+      },
+      x: 30,
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power1.out",
+      once: true, // Animate only once on first view
+    });
+  });
+</script>
+
+<!-- sectors -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Entrance Staggered "Popup" Animation
+    gsap.from(".gsap-field", {
+      scrollTrigger: {
+        trigger: ".fields-grid",
+        // toggleActions: "play none none none" // Ensures it only plays once
+      },
+      once: true, // Animate only once on first view
+
+      opacity: 1, // Start invisible
+      duration: 0.8, // Duration of each individual popup
+      stagger: 0.2, // Time between each card starting (0.8 was too slow)
+      ease: "back.out(1.7)", // This creates the "popup/bounce" effect
+    });
+  });
+</script>
+
+<!-- discoveries -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Reveal Section Header
+    gsap.to(".gsap-reveal", {
+      scrollTrigger: {
+        trigger: ".biotech-discoveries",
+        start: "top 80%",
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+      once: true, // Animate only once on first view
+    });
+
+    // 2. One-by-One "Popup" Animation for Cards
+    gsap.to(".gsap-feed-card", {
+      scrollTrigger: {
+        trigger: ".feed-track",
+        start: "top 75%",
+      },
+      opacity: 1,
+      once: true, // Animate only once on first view
+
+      y: 0,
+      duration: 1.5,
+      stagger: 0.25, // Delay between each card
+      ease: "power2.out", // Creates the popup 'bounce'
+    });
+  });
+</script>
+
+<!-- innovations -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Reveal Section Header
+    gsap.from(".gsap-reveal", {
+      scrollTrigger: {
+        trigger: ".innovation-process",
+        start: "top 80%",
+        once: true, // This ensures the animation only plays once
+      },
+      opacity: 1, // Animate FROM 0
+      duration: 1,
+      ease: "power2.out",
+      once: true, // Animate only once on first view
+    });
+
+    // 2. Sequential Step Popup
+    gsap.to(".gsap-step", {
+      scrollTrigger: {
+        trigger: ".steps-grid",
+        start: "top 70%",
+        once: true, // Stay visible after arriving
+      },
+      opacity: 1,
+      y: 10,
+      duration: 1,
+      stagger: 0.3,
+      ease: "power3.out",
+      once: true, // Animate only once on first view
+    });
+
+    // 3. Marker Scaling Effect
+    gsap.from(".step-marker", {
+      scrollTrigger: {
+        trigger: ".steps-grid",
+        start: "top 70%",
+        once: true, // Do not scale down again on scroll up
+      },
+      duration: 1,
+      stagger: 0.3,
+      ease: "power4.out",
+    });
+  });
+</script>
+
+<!-- tools -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Entrance Staggered Animation
+    const toolsTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".biotech-tools",
+        start: "top 80%",
+        once: true, // Animate only once on first view
+      },
+    });
+
+    toolsTl.from(".biotech-tools .gsap-reveal", {
+      opacity: 1,
+      duration: 1,
+      stagger: 0.6,
+      ease: "power2.out",
+      once: true, // Animate only once on first view
+    });
+
+    // 2. Dynamic Content Swap functionality
+    const techModules = document.querySelectorAll(".tech-module");
+    const displayContents = document.querySelectorAll(".display-content");
+    const defaultContent = document.getElementById("default-content");
+
+    techModules.forEach((module) => {
+      module.addEventListener("mouseenter", () => {
+        const techId = module.getAttribute("data-tech");
+        const targetContent = document.getElementById(`${techId}-content`);
+
+        // Check if target content exists
+        if (targetContent) {
+          // Deactivate current active content
+          displayContents.forEach((content) => {
+            if (content !== targetContent) {
+              content.classList.remove("active");
+            }
+          });
+
+          // Activate target content
+          targetContent.classList.add("active");
+        }
+      });
+
+      // Optional: Revert to default content on mouseleave
+      module.addEventListener("mouseleave", () => {
+        // Uncomment the following lines if you want the default content to reappear
+        // displayContents.forEach(content => content.classList.remove('active'));
+        // defaultContent.classList.add('active');
+      });
+    });
+  });
+</script>
+
+<!-- 7,8 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 07 / Impact Reveal
+    gsap.to(".gsap-impact-header", {
+      scrollTrigger: {
+        trigger: ".research-impact",
+        start: "top 85%",
+        once: true,
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+    });
+
+    gsap.to(".gsap-impact-card", {
+      scrollTrigger: { trigger: ".impact-grid", start: "top 80%", once: true },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.2,
+    });
+
+    // 08 / Team Reveal
+    gsap.to(".gsap-team-header", {
+      scrollTrigger: {
+        trigger: ".research-team",
+        start: "top 85%",
+        once: true,
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+    });
+
+    gsap.to(".gsap-team-card", {
+      scrollTrigger: { trigger: ".team-grid", start: "top 80%", once: true },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.2,
+    });
+  });
+</script>
+
+<!-- 9,10 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 09 / Applications Reveal
+    gsap.to(".gsap-apps-header", {
+      scrollTrigger: { trigger: ".bio-apps", start: "top 85%", once: true },
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+    });
+
+    gsap.to(".gsap-app-item", {
+      scrollTrigger: {
+        trigger: ".apps-featured-grid",
+        start: "top 80%",
+        once: true,
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.25,
+      ease: "power2.out",
+    });
+
+    // 10 / Global Innovation Reveal
+    gsap.to(".gsap-global-header", {
+      scrollTrigger: {
+        trigger: ".global-progress",
+        start: "top 85%",
+        once: true,
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    });
+
+    const globalTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".global-banner",
+        start: "top 75%",
+        once: true,
+      },
+    });
+
+    globalTl
+      .to(".gsap-global-text", { y: 0, opacity: 1, duration: 0.8 })
+      .to(".gsap-global-stats", { y: 0, opacity: 1, duration: 0.8 }, "-=0.4")
+      .to(".gsap-global-img", { y: 0, opacity: 1, duration: 1 }, "-=0.6");
+  });
+</script>
+
+<!-- 11  -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 11 / Insights Reveal
+    gsap.to(".gsap-insights-header", {
+      scrollTrigger: { trigger: ".bio-insights", start: "top 85%", once: true },
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+    });
+
+    gsap.to(".gsap-insight-card", {
+      scrollTrigger: {
+        trigger: ".insights-grid",
+        start: "top 80%",
+        once: true,
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.25,
+      ease: "power2.out",
+    });
+  });
+</script>
+
+<!-- gsap header -->
+
+<!-- 2 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Reveal Section 02 Header (Platform Overview)
+    gsap.to(".gsap-overview-header", {
+      scrollTrigger: {
+        trigger: ".about", // Use the parent container/ID for this section
+        start: "top 85%", // Animation starts when section is 85% from top
+        once: true, // Plays once and stays stable
+      },
+      y: 0, // Returns to natural position
+      opacity: 1, // Fades in to full visibility
+      duration: 1.2,
+      ease: "power2.out",
+    });
+  });
+</script>
+<!-- 3 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Reveal Section 03 Header (Industry Sectors)
+    gsap.to(".gsap-sectors-header", {
+      scrollTrigger: {
+        trigger: ".fields-grid", // Or your main sector section container
+        start: "top 85%", // Animation starts when section is 85% from top
+        once: true, // Animation plays once and stays visible
+      },
+      y: 0, // Returns to natural position
+      opacity: 1, // Fades in to full visibility
+      duration: 1.2,
+      ease: "power2.out",
+    });
+  });
+</script>
+<!-- 4 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.to(".gsap-discoveries-header", {
+      scrollTrigger: {
+        trigger: ".biotech-discoveries", // Parent section container
+        start: "top 85%", // Triggers when section is 85% from top
+        once: true, // Plays once and stays stable
+      },
+      y: 0, // Arrives at final position
+      opacity: 1, // Becomes fully visible
+      duration: 1.2,
+      ease: "power2.out",
+    });
+  });
+</script>
+<!-- 5 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Reveal Section 05 Header (Innovation Workflow)
+    gsap.to(".gsap-workflow-header", {
+      scrollTrigger: {
+        trigger: ".innovation-process", // Parent section container
+        start: "top 85%", // Triggers when section is 85% from top
+        once: true, // Plays once and stays stable
+      },
+      y: 0, // Arrives at final position
+      opacity: 1, // Becomes fully visible
+      duration: 1.2,
+      ease: "power2.out",
+    });
+  });
+</script>
+<!-- 6 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Reveal Section 06 Header
+    gsap.to(".gsap-tech-header", {
+      scrollTrigger: {
+        trigger: ".biotech-tools", // Parent section as trigger
+        start: "top 85%", // Starts when section is 85% from top
+        once: true, // CRITICAL: Plays once and stays visible
+      },
+      y: 0, // Moves to original position
+      opacity: 1, // Fades in to full visibility
+      duration: 0.4,
+      ease: "power2.out",
+    });
+  });
+</script>
