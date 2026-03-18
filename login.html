@@ -154,13 +154,13 @@
             <h2>Login</h2>
             <p>Access your Dashboard and Manage with Care.</p>
 
-            <form id="loginForm" action="./error.html">
+            <form id="loginForm">
               <!-- ROLE -->
               <div class="input-group">
                 <select id="role" required>
                   <option value="">Login As</option>
-                  <option value="user">Administrator</option>
-                  <option value="admin">Patients</option>
+                  <option value="user">User</option>
+                  <option value="admin">Administrator</option>
                 </select>
               </div>
 
@@ -261,6 +261,62 @@
       </div>
     </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const togglePassword = document.getElementById("togglePassword");
+      const password = document.getElementById("password");
+      const form = document.getElementById("loginForm");
+
+      togglePassword.addEventListener("click", () => {
+        const type = password.type === "password" ? "text" : "password";
+        password.type = type;
+        togglePassword.textContent = type === "password" ? "Show" : "Hide";
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const role = document.getElementById("role").value;
+        const email = document.getElementById("email").value.trim();
+        const pass = password.value.trim();
+
+        const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+        if (!role) {
+          alert("Please select login role");
+          return;
+        }
+
+        if (!gmailPattern.test(email)) {
+          alert("Email must end with @gmail.com");
+          return;
+        }
+
+        if (pass !== "stackly@123") {
+          alert("Incorrect Password. Use: stackly@123");
+          return;
+        }
+
+        try {
+          // ✅ Store data
+          sessionStorage.setItem("loggedInUser", email);
+          sessionStorage.setItem("role", role);
+
+          console.log("Stored:", email, role);
+
+          // ✅ Redirect AFTER storing
+          if (role === "user") {
+            window.location.href = "./dashboard.html";
+          } else if (role === "admin") {
+            window.location.href = "./dashboard2.html";
+          }
+        } catch (error) {
+          console.error("Storage error:", error);
+          alert("Storage issue. Try using Live Server.");
+        }
+      });
+    });
+  </script>
 </html>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -276,50 +332,3 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-<script>
-  const togglePassword = document.getElementById("togglePassword");
-  const password = document.getElementById("password");
-  const form = document.getElementById("loginForm");
-
-  // show / hide password
-  togglePassword.addEventListener("click", () => {
-    const type = password.type === "password" ? "text" : "password";
-    password.type = type;
-    togglePassword.textContent = type === "password" ? "Show" : "Hide";
-  });
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const role = document.getElementById("role").value;
-    const email = document.getElementById("email").value.trim();
-    const pass = password.value.trim();
-
-    const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-
-    if (!gmailPattern.test(email)) {
-      alert("Email must end with @gmail.com");
-      return;
-    }
-
-    if (pass !== "stackly@123") {
-      alert("Incorrect Password. Use: stackly@123");
-      return;
-    }
-
-    // redirect based on role
-    // redirect based on role
-    if (role === "user") {
-      sessionStorage.setItem("loggedInUser", email);
-      sessionStorage.setItem("role", "user");
-      window.location.href = "dashboard.html";
-    } else if (role === "admin") {
-      sessionStorage.setItem("loggedInUser", email);
-      sessionStorage.setItem("role", "admin");
-      window.location.href = "dashboard2.html";
-    } else {
-      alert("Please select login role");
-    }
-  });
-</script>

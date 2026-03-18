@@ -904,7 +904,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<script>
+<!-- <script>
   document.addEventListener("DOMContentLoaded", () => {
     // =========================
     // ✅ GET USER EMAIL
@@ -1082,4 +1082,176 @@
       }
     });
   });
+</script> -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const userEmailDisplay = document.getElementById("userEmailDisplay");
+  const dropdownEmail = document.getElementById("dropdown-email");
+  const greetingEl = document.getElementById("greeting");
+  const avatarBtn = document.getElementById("profile-avatar");
+
+  // ✅ Correct keys
+  const activeEmail = sessionStorage.getItem("loggedInUser");
+  const role = sessionStorage.getItem("role");
+
+  if (!activeEmail) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  // 🔐 Restrict admin page
+  if (role !== "admin") {
+    window.location.href = "dashboard.html";
+    return;
+  }
+
+  // ✅ Show email
+  if (userEmailDisplay) userEmailDisplay.textContent = activeEmail;
+  if (dropdownEmail) dropdownEmail.textContent = activeEmail;
+
+  // ✅ Greeting
+  if (greetingEl) {
+    let name = activeEmail.split("@")[0];
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    greetingEl.textContent = `Hello, ${name}`;
+  }
+
+  // ✅ Avatar
+  if (avatarBtn) {
+    avatarBtn.textContent = activeEmail.charAt(0).toUpperCase();
+  }
+
+  // =========================
+  // PROFILE DROPDOWN
+  // =========================
+  const profileDropdown = document.getElementById("profile-dropdown");
+
+  if (avatarBtn && profileDropdown) {
+    avatarBtn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      profileDropdown.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (
+        profileDropdown.classList.contains("active") &&
+        !profileDropdown.contains(event.target) &&
+        event.target !== avatarBtn
+      ) {
+        profileDropdown.classList.remove("active");
+      }
+    });
+  }
+
+  // =========================
+  // CHARTS
+  // =========================
+  function initCharts() {
+    const glucoseCtx = document.getElementById("glucoseChart");
+    if (glucoseCtx) {
+      new Chart(glucoseCtx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar"],
+          datasets: [
+            {
+              label: "Glucose",
+              data: [95, 102, 110],
+              borderColor: "#00D4FF",
+              backgroundColor: "rgba(0,212,255,0.1)",
+              tension: 0.4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+        },
+      });
+    }
+
+    const cholCtx = document.getElementById("cholesterolChart");
+    if (cholCtx) {
+      new Chart(cholCtx, {
+        type: "bar",
+        data: {
+          labels: ["LDL", "HDL", "Total"],
+          datasets: [
+            {
+              label: "Cholesterol",
+              data: [95, 55, 180],
+              backgroundColor: "rgba(16,185,129,0.6)",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+        },
+      });
+    }
+  }
+
+  // =========================
+  // SIDEBAR NAV
+  // =========================
+  const sidebarLinks = document.querySelectorAll(".sidebar-link[data-target]");
+  const contentViews = document.querySelectorAll(".content-view");
+  const sidebar = document.getElementById("sidebar");
+
+  sidebarLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      sidebarLinks.forEach((l) => l.classList.remove("active"));
+      this.classList.add("active");
+
+      contentViews.forEach((view) => view.classList.remove("active-view"));
+
+      const targetId = this.getAttribute("data-target");
+      const targetView = document.getElementById(targetId);
+
+      if (targetView) {
+        targetView.classList.add("active-view");
+
+        if (targetId === "view-analytics") {
+          initCharts();
+        }
+      }
+
+      if (window.innerWidth <= 768 && sidebar) {
+        sidebar.classList.remove("mobile-open");
+      }
+    });
+  });
+
+  // =========================
+  // MOBILE SIDEBAR
+  // =========================
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const closeSidebarBtn = document.getElementById("close-sidebar");
+
+  if (mobileMenuBtn && sidebar) {
+    mobileMenuBtn.addEventListener("click", () => {
+      sidebar.classList.add("mobile-open");
+    });
+  }
+
+  if (closeSidebarBtn && sidebar) {
+    closeSidebarBtn.addEventListener("click", () => {
+      sidebar.classList.remove("mobile-open");
+    });
+  }
+
+  document.addEventListener("click", (event) => {
+    if (!sidebar || !mobileMenuBtn) return;
+
+    if (
+      !sidebar.contains(event.target) &&
+      !mobileMenuBtn.contains(event.target) &&
+      sidebar.classList.contains("mobile-open")
+    ) {
+      sidebar.classList.remove("mobile-open");
+    }
+  });
+});
 </script>
