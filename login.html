@@ -159,8 +159,8 @@
               <div class="input-group">
                 <select id="role" required>
                   <option value="">Login As</option>
-                  <option value="user">User</option>
-                  <option value="admin">Administrator</option>
+                  <option value="admin">Patients</option>
+                  <option value="user">Administrator</option>
                 </select>
               </div>
 
@@ -282,6 +282,10 @@
 
         const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
+        // ✅ Password rule
+        const passwordPattern =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
         if (!role) {
           alert("Please select login role");
           return;
@@ -292,26 +296,23 @@
           return;
         }
 
-        if (pass !== "stackly@123") {
-          alert("Incorrect Password. Use: stackly@123");
+        if (!passwordPattern.test(pass)) {
+          alert(
+            "Password must be at least 6 characters and include uppercase, lowercase, number, and symbol",
+          );
           return;
         }
 
         try {
-          // ✅ Store data
           sessionStorage.setItem("loggedInUser", email);
           sessionStorage.setItem("role", role);
 
-          console.log("Stored:", email, role);
-
-          // ✅ Redirect AFTER storing
           if (role === "user") {
             window.location.href = "./dashboard.html";
           } else if (role === "admin") {
             window.location.href = "./dashboard2.html";
           }
         } catch (error) {
-          console.error("Storage error:", error);
           alert("Storage issue. Try using Live Server.");
         }
       });
